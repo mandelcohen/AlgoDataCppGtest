@@ -8,10 +8,15 @@ using namespace TurboCollections;
 using namespace std;
 
 
-TEST(TurboMaths, test_SayHello){
+TEST(TurboMaths, test_GetOddNumbers){
+
 
 }
 
+TEST(TurboMaths, test_GetEvenNumbers){
+
+
+}
 
 /*
 void EXPECT_VECTOR3_EQ(const Vector3& vector3, float x, float y, float z){
