@@ -1,0 +1,29 @@
+Start testing: Apr 30 15:31 CEST
+----------------------------------------------------------
+1/1 Testing: vector3.hello_this_is_a_test
+1/1 Test: vector3.hello_this_is_a_test
+Command: "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests" "--gtest_filter=vector3.hello_this_is_a_test" "--gtest_also_run_disabled_tests"
+Directory: /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests
+"vector3.hello_this_is_a_test" start time: Apr 30 15:31 CEST
+Output:
+----------------------------------------------------------
+Note: Google Test filter = vector3.hello_this_is_a_test
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from vector3
+[ RUN      ] vector3.hello_this_is_a_test
+[       OK ] vector3.hello_this_is_a_test (0 ms)
+[----------] 1 test from vector3 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"vector3.hello_this_is_a_test" end time: Apr 30 15:31 CEST
+"vector3.hello_this_is_a_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Apr 30 15:31 CEST

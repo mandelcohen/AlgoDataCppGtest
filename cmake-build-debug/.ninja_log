@@ -1,0 +1,18 @@
+# ninja log v5
+3	642	1714483889259219168	src/class_library/CMakeFiles/CLASS_LIBRARY.dir/vector3.cpp.o	9991f6f12321c509
+647	707	1714483889331295000	src/class_library/libCLASS_LIBRARY.a	ebbd36c75ee77055
+2	792	1714483889408535814	src/CMakeFiles/main.dir/main.cpp.o	a50e07c0204f129f
+792	871	1714483889492376780	src/main	8e2d9e971f3d4bab
+707	1865	1714483890478531242	_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o	6a621577d25ad379
+3	2049	1714483890657572288	_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o	c3259c6a701c0169
+1866	2983	1714483891599022881	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	50a5b051cf0b9bc
+2049	3098	1714483891713699765	tests/class_library_tests/CMakeFiles/class_library_tests.dir/main.cpp.o	6ebf8e1bb981505a
+2983	3975	1714483892590858068	tests/class_library_tests/CMakeFiles/class_library_tests.dir/vector3_test.cpp.o	2414f0cca3313118
+871	4225	1714483892831299516	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	9963ebe861c87a21
+4226	4329	1714483892953303000	lib/libgtestd.a	81708d1ec0af1c51
+4329	4401	1714483893025814000	lib/libgtest_maind.a	3fc2ca77c8c7007a
+4329	4423	1714483893047898000	lib/libgmockd.a	83a5d2dbd4dcb76
+4423	4482	1714483893106763000	lib/libgmock_maind.a	cd53c3a4505e119d
+4401	4698	1714483893322751560	tests/class_library_tests/class_library_tests	bb535795c8585a03
+4401	4698	1714483893322751560	tests/class_library_tests/class_library_tests[1]_tests.cmake	bb535795c8585a03
+4401	4698	1714483893322751560	/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests[1]_tests.cmake	bb535795c8585a03

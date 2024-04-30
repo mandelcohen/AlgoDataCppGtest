@@ -1,0 +1,5 @@
+if(EXISTS "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests[1]_tests.cmake")
+  include("/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests[1]_tests.cmake")
+else()
+  add_test(class_library_tests_NOT_BUILT class_library_tests_NOT_BUILT)
+endif()

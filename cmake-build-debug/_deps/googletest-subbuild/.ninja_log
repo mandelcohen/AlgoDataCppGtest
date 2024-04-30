@@ -1,0 +1,23 @@
+# ninja log v5
+1	53	1714483825965462526	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	bfd67897d6185429
+1	53	1714483825965462526	/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	bfd67897d6185429
+53	921	1714483826833368738	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	196aea666a7bd04e
+53	921	1714483826833368738	googletest-populate-prefix/src/release-1.11.0.zip	196aea666a7bd04e
+53	921	1714483826833368738	/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	196aea666a7bd04e
+53	921	1714483826833368738	/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/release-1.11.0.zip	196aea666a7bd04e
+921	978	1714483826890908640	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	e10bbdc937ab06fb
+921	978	1714483826890908640	/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	e10bbdc937ab06fb
+979	1030	1714483826942418272	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	dc507bcb832914ec
+979	1030	1714483826942418272	/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	dc507bcb832914ec
+1030	1089	1714483827000999601	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	159a1f334047d8ad
+1030	1089	1714483827000999601	/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	159a1f334047d8ad
+1089	1144	1714483827056764307	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	5460791c55adda21
+1089	1144	1714483827056764307	/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	5460791c55adda21
+1144	1196	1714483827108431578	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	94d7a1253ba7e681
+1144	1196	1714483827108431578	/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	94d7a1253ba7e681
+1196	1246	1714483827158555789	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	1557cc19a8573373
+1196	1246	1714483827158555789	/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	1557cc19a8573373
+1246	1318	1714483827230773611	CMakeFiles/googletest-populate-complete	d9e23166a1b8f820
+1246	1318	1714483827230773611	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	d9e23166a1b8f820
+1246	1318	1714483827230773611	/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	d9e23166a1b8f820
+1246	1318	1714483827230773611	/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	d9e23166a1b8f820
