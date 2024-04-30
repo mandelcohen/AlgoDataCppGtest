@@ -1,11 +1,14 @@
 #include <string>
+#include "iostream"
 
 using namespace std;
 
 namespace TurboCollections {
     class TurboMaths {
     public:
-        
+        static vector<int> GetOddNumbers(int maxNumber){}
+        static vector<int> GetEvenNumbers(int maxNumber){}
+
     };
 
 
