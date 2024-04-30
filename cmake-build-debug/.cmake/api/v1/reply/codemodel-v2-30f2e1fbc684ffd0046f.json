@@ -227,14 +227,14 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "CLASS_LIBRARY::@390a22cf6c1c0ac5b178",
-					"jsonFile" : "target-CLASS_LIBRARY-Debug-624bab3ad559eb44da34.json",
+					"jsonFile" : "target-CLASS_LIBRARY-Debug-fcc95220e6f8ef3fa36b.json",
 					"name" : "CLASS_LIBRARY",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 7,
 					"id" : "class_library_tests::@00a3b611e7cb6a19b81e",
-					"jsonFile" : "target-class_library_tests-Debug-4d9c862207863ed70ba0.json",
+					"jsonFile" : "target-class_library_tests-Debug-93b29e9915b7dc6b78f0.json",
 					"name" : "class_library_tests",
 					"projectIndex" : 1
 				},

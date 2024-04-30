@@ -7,6 +7,13 @@
 using namespace TurboCollections;
 using namespace std;
 
+
+TEST(TurboMaths, test_SayHello){
+
+}
+
+
+/*
 void EXPECT_VECTOR3_EQ(const Vector3& vector3, float x, float y, float z){
 
     EXPECT_FLOAT_EQ(x, vector3.x);
@@ -19,7 +26,6 @@ TEST(vector3, hello_this_is_a_test) {
     EXPECT_VECTOR3_EQ(vector3, 2, 3, 5);
 }
 
-/*
 #if defined ALL_TESTS || REMOVE_THIS_WHEN_YOU_HAVE_IMPLEMENTED_THE_PLUS_OPERATOR
 TEST(plus_operator, returns_the_sum_of_passed_values) {
     Vector3 a(1, 2, 3);
