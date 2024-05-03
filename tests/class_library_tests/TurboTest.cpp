@@ -9,13 +9,9 @@ using namespace std;
 
 
 TEST(TurboMaths, test_GetOddNumbers){
-
-
 }
 
 TEST(TurboMaths, test_GetEvenNumbers){
-
-
 }
 
 /*

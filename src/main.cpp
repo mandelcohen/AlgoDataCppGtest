@@ -1,22 +1,21 @@
 #include <iostream>
+#include <cstdio>
+#include <vector>
+#include "TurboCollections.hpp"
 
 using namespace std;
+using namespace TurboCollections;
 
-class Foo{
-public:
-    char arr[10];
-    Foo(){
-        const char* hello = "Hello";
-        memcpy(arr, hello, sizeof(hello));
-    }
-    char& operator[](int index){
-        return arr[index];
-    }
-};
 
-int main(int argc, char *argv[])
+int main()
 {
-    Foo foo;
-    foo[0] = 'B';
-    cout << foo.arr; // print: Bello
+    for (auto& odd : TurboMaths::GetOddNumbers(5)) {
+        cout << odd << " " << endl;
+    }
+
+    for (auto& even : TurboMaths::GetEvenNumbers(5)) {
+        cout << even << " " << endl;
+    }
+    
+    return 0;
 }
