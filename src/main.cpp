@@ -8,6 +8,55 @@ using namespace TurboCollections;
 using namespace TurboStack;
 using namespace TurboQueue;
 
+// SpotifySongQueue
+int main()
+{
+    auto songQueue = new TurboLinkedQueue<string>{};
+    bool quit = false;
+
+    while (!quit)
+    {
+        if(songQueue->empty())
+        {
+            std::cout << "The Queue is empty! [a]dd or [q]uit?" << std::endl;
+        }
+        else
+        {
+            std::cout << "What would you like to do? [s]kip or [a]dd?" << std::endl;
+        }
+
+        char input;
+        cin >> input;
+
+        if (input == 's' && songQueue->empty())
+            std::cout << "The Queue is empty! [a]dd or [q]uit?" << std::endl;
+
+
+        if (input == 'a')
+        {
+            std::cout << "Enter the Song's name:" << std::endl;
+            string songName;
+            std::cin >> songName;
+            songQueue->enqueue(songName);
+        }
+        if (input == 's')
+        {
+            std::cout << "Now Playing: " << songQueue->front() << std::endl;
+            songQueue->dequeue();
+        }
+        if(input == 'q')
+        {
+            std::cout << "Quitting Spotify..." << std::endl;
+            delete songQueue;
+            quit = true;
+        }
+    }
+    return 0;
+}
+
+
+/*
+// Preliminary "Tests" TurboQueue (Awaiting help getting gmock to test collections)
 int main()
 {
     // Can items be enqueued?
@@ -33,8 +82,7 @@ int main()
     std::cout << "After dequeue: " << testQueue->empty() << std::endl;
     return 0;
 }
-
-
+*/
 
 /*
 // GameStateHistory
@@ -124,7 +172,7 @@ int main()
 */
 
 /*
-// Preliminary "Tests" (Awaiting help getting gmock to test collections)
+// Preliminary "Tests" TurboStack (Awaiting help getting gmock to test collections)
 int main()
 {
     //Can items be pushed into the stack?
