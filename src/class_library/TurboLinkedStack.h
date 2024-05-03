@@ -45,7 +45,7 @@ public:
     const T& top() const;
     void pop();
     bool empty() const;
-    size_t size() const;
+    size_t size();
 // ----------- (End) The "Real" Collection Code ---------------
 #pragma endregion Collection_Code
 
@@ -80,19 +80,9 @@ public:
 template <typename T>
 void TurboLinkedStack<T>::push(const T &item)
 {
-    if(lastNode == nullptr)
-    {
-        lastNode = new Node<T>{item, nullptr};
-    }
-    else
-    {
-        Node<T>* current = lastNode;
-        while(current->Previous != nullptr)
-        {
-            current = current->Previous;
-        }
-        current->Previous = new Node<T>{item, nullptr};
-    }
+    auto newNode = new Node<T>{item, nullptr};
+    newNode->Previous = lastNode;
+    lastNode = newNode;
 }
 
 template <typename T>
@@ -103,8 +93,9 @@ T& TurboLinkedStack<T>::top() {
 
 template <typename T>
 void TurboLinkedStack<T>::pop() {
-    lastNode->Previous = lastNode;
-    // Assign the Last Node's Previous Node to be the Last Node.
+    auto toDelete = lastNode;
+    lastNode = toDelete->Previous;
+    delete toDelete;
 }
 
 template <typename T>
@@ -115,7 +106,7 @@ bool TurboLinkedStack<T>::empty() const {
 }
 
 template <typename T>
-size_t TurboLinkedStack<T>::size() const {
+size_t TurboLinkedStack<T>::size() {
     size_t count = 0;
     while(lastNode->Previous != nullptr){
         count++;

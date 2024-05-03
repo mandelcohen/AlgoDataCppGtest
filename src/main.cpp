@@ -10,6 +10,7 @@ using namespace TurboStack;
 // GameStateHistory
 int main()
 {
+    //Can items be pushed into the stack?
     auto testStack = new TurboLinkedStack<int>{};
     testStack->push(1);
     testStack->push(2);
@@ -20,8 +21,15 @@ int main()
     }
     std::cout << std::endl;
 
+    //Does top and pop work as expected?
+    std::cout << testStack->top() << std::endl;
+    testStack->pop();
+    std::cout << testStack->top() << std::endl;
 
-
+    // Does size and empty work as expected?
+    std::cout << "Size: " << testStack->size() << std::endl;
+    testStack->pop();
+    std::cout << "Empty? " << testStack->empty() << std::endl;
 
     return 0;
 }
