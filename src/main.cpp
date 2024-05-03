@@ -2,11 +2,41 @@
 #include <vector>
 #include "TurboCollections.hpp"
 #include "TurboLinkedStack.h"
+#include "TurboLinkedQueue.h"
 
 using namespace TurboCollections;
 using namespace TurboStack;
+using namespace TurboQueue;
+
+int main()
+{
+    // Can items be enqueued?
+    auto testQueue = new TurboLinkedQueue<int>{};
+    testQueue->enqueue(1);
+    testQueue->enqueue(2);
+    testQueue->enqueue(3);
+
+    for (auto& a : *testQueue) {
+        std::cout << a << " " ;
+    }
+    std::cout << std::endl;
+
+    //Does front and dequeue work as expected?
+    std::cout << "At front: " << testQueue->front() << std::endl;
+    testQueue->dequeue();
+    std::cout << "After dequeue: " << testQueue->front() << std::endl;
+
+    // Does size and empty work as expected?
+    std::cout << "Size: " << testQueue->size() << std::endl;
+    std::cout << "Empty? " << testQueue->empty() << std::endl;
+    testQueue->dequeue();
+    std::cout << "After dequeue: " << testQueue->empty() << std::endl;
+    return 0;
+}
 
 
+
+/*
 // GameStateHistory
 int main()
 {
@@ -91,6 +121,7 @@ int main()
     }
     return 0;
 }
+*/
 
 /*
 // Preliminary "Tests" (Awaiting help getting gmock to test collections)
