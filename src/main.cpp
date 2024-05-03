@@ -6,7 +6,16 @@
 using namespace std;
 using namespace TurboCollections;
 
+int main()
+{
+    
 
+
+    return 0;
+}
+
+
+/*
 int main()
 {
     for (auto& odd : TurboMaths::GetOddNumbers(5)) {
@@ -19,3 +28,4 @@ int main()
 
     return 0;
 }
+*/

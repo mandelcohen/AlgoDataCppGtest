@@ -10,6 +10,7 @@ struct Node
 template<typename T>
 class TurboLinkedList
 {
+public:
     // class declaration to allow using it before
     // defining it
     template<typename>
@@ -18,7 +19,7 @@ class TurboLinkedList
     // pointer to the first node of the list
     // can be null, if the list is empty
     Node<T>* first{};
-public:
+
 
 #pragma region Type_Names
 // ----------- (Start) Type Name Definitions (used by GMock) ------------
@@ -28,10 +29,10 @@ public:
     // the iterators and which is the value_type of this
     // collection, e.g. TurboLinkedList<int>, T is int
     using value_type = T;
-    // the type of the the iterator if this is a non-const
+    // the type of the iterator if this is a non-const
     // collection, e.g. TurboLinkedList<int> list;
     using iterator               = Iterator<T>;
-    // the type of the the iterator if this is a const
+    // the type of the iterator if this is a const
     // collection, e.g. const TurboLinkedList<int> list;
     using const_iterator         = Iterator<const T>;
     // the type of the node that we use

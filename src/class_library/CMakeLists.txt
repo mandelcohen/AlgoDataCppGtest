@@ -4,6 +4,7 @@ set(CLASS_LIBRARY_SRCS
         TurboLinkedStack.h
         TurboLinkedStack.cpp
         TurboLinkedList.h
+        TurboLinkedList.cpp
 )
 
 # Declare the library
