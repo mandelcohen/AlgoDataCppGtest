@@ -3,7 +3,7 @@
 template<typename T>
 struct Node
 {
-    T value;
+    T val;
     Node* next;
 };
 
@@ -49,7 +49,7 @@ public:
 #pragma region Iterator_Pattern
 // ---------------  (Start) Iterator Pattern Code -------------------
 
-    // allows using for(auto& value : list)
+    // allows using for(auto& val : list)
     // also allows gmock to work with collections
     iterator begin();
     const_iterator begin() const;
@@ -170,7 +170,7 @@ bool TurboLinkedList<T>::Iterator<U>::operator!=(const Iterator& other) const
 }
 
 
-// The Increment Operator is supposed to move to the next value
+// The Increment Operator is supposed to move to the next val
 // In this case, it is the node which is next from the one we currently point to
 template <typename T>
 template <typename U>
@@ -180,12 +180,12 @@ typename TurboLinkedList<T>::template Iterator<U>& TurboLinkedList<T>::Iterator<
     return *this;
 }
 
-// The Dereference Operator is supposed to return the current value
-// In this case, it is the value in the node that we currently point to
+// The Dereference Operator is supposed to return the current val
+// In this case, it is the val in the node that we currently point to
 template <typename T>
 template <typename U>
 U& TurboLinkedList<T>::Iterator<U>::operator*() const
 {
-    return current->value;
+    return current->val;
 }
 #pragma endregion Iterator_Pattern

@@ -1,14 +1,26 @@
 #include <iostream>
-#include <cstdio>
 #include <vector>
 #include "TurboCollections.hpp"
+#include "TurboLinkedStack.h"
 
-using namespace std;
 using namespace TurboCollections;
+using namespace TurboStack;
 
+
+// GameStateHistory
 int main()
 {
-    
+    auto testStack = new TurboLinkedStack<int>{};
+    testStack->push(1);
+    testStack->push(2);
+    testStack->push(3);
+
+    for (auto& a : *testStack) {
+        std::cout << a << " " ;
+    }
+    std::cout << std::endl;
+
+
 
 
     return 0;
