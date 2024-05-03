@@ -10,6 +10,92 @@ using namespace TurboStack;
 // GameStateHistory
 int main()
 {
+    auto stateHistory = new TurboLinkedStack<string> {};
+    stateHistory->push("Main Menu");
+    auto nextLevel = 1;
+
+    while (!stateHistory->empty())
+    {
+        tryAgain:
+        if(stateHistory->top() == "Main Menu")
+        {
+            std::cout << "What do you want to do?" << std::endl;
+            std::cout << "[0]: Go to Level " << nextLevel << std::endl;
+            std::cout << "[1]: Go to Settings" << std::endl;
+            std::cout << "[q]: Quit" << std::endl;
+        }
+        else
+        {
+            std::cout << "You are here: " << stateHistory->top() << std::endl;
+            std::cout << "What do you want to do?" << std::endl;
+            std::cout << "[0]: Go to Level " << nextLevel << std::endl;
+            std::cout << "[1]: Go to Main Menu" << std::endl;
+            std::cout << "[b]: Go back to " << stateHistory->secondFromTop() << std::endl;
+        }
+
+        char input;
+        std::cin >> input;
+
+        if (stateHistory->top() == "Main Menu")
+        {
+            if(input == '1')
+            {
+                stateHistory->push("Settings");
+                std::cout << "[b]: Go back to Main Menu" << std::endl;
+                BackFromMenu:
+                char goBack;
+                std::cin >> goBack;
+                while(goBack != 'b')
+                {
+                    goto BackFromMenu;
+                }
+                stateHistory->pop();
+            }
+        }
+        else
+        {
+            if(input == '1')
+            {
+                while(stateHistory->top() != "Main Menu")
+                {
+                    stateHistory->pop();
+                }
+                nextLevel = 1;
+            }
+            if(input == 'b')
+            {
+                stateHistory->pop();
+                --nextLevel;
+            }
+        }
+
+        if(input == '0')
+        {
+            string level = to_string(nextLevel);
+            stateHistory->push("Level " + level);
+            ++nextLevel;
+        }
+
+        if(input == 'q')
+        {
+            while (!stateHistory->empty())
+            {
+                stateHistory->pop();
+            }
+        }
+
+        else
+        {
+            goto tryAgain;
+        }
+    }
+    return 0;
+}
+
+/*
+// Preliminary "Tests" (Awaiting help getting gmock to test collections)
+int main()
+{
     //Can items be pushed into the stack?
     auto testStack = new TurboLinkedStack<int>{};
     testStack->push(1);
@@ -33,7 +119,7 @@ int main()
 
     return 0;
 }
-
+*/
 
 /*
 int main()

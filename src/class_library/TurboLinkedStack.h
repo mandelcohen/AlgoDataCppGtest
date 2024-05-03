@@ -42,6 +42,7 @@ public:
 // ----------- (Start) The "Real" Collection Code ---------------
     void push(const T& item);
     T& top();
+    const T& secondFromTop() const;
     const T& top() const;
     void pop();
     bool empty() const;
@@ -89,6 +90,18 @@ template <typename T>
 T& TurboLinkedStack<T>::top() {
     return lastNode->Value;
     // Return the Value of Last Node here.
+}
+
+template <typename T>
+const T& TurboLinkedStack<T>::top() const {
+    return lastNode->Value;
+    // Return the Value of Last Node here.
+}
+
+template <typename T>
+const T& TurboLinkedStack<T>::secondFromTop() const {
+    auto prev = lastNode->Previous;
+    return prev->Value;
 }
 
 template <typename T>
