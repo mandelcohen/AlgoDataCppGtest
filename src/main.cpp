@@ -16,6 +16,6 @@ int main()
     for (auto& even : TurboMaths::GetEvenNumbers(5)) {
         cout << even << " " << endl;
     }
-    
+
     return 0;
 }

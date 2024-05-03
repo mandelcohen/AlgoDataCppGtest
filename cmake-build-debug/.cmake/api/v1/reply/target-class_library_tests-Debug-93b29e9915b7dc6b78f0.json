@@ -93,15 +93,15 @@
 	[
 		{
 			"backtrace" : 2,
+			"id" : "CLASS_LIBRARY::@390a22cf6c1c0ac5b178"
+		},
+		{
+			"backtrace" : 2,
 			"id" : "gtest::@1ea2dfc0605fe3ab2a3f"
 		},
 		{
 			"backtrace" : 2,
 			"id" : "gtest_main::@1ea2dfc0605fe3ab2a3f"
-		},
-		{
-			"backtrace" : 2,
-			"id" : "CLASS_LIBRARY::@390a22cf6c1c0ac5b178"
 		}
 	],
 	"id" : "class_library_tests::@00a3b611e7cb6a19b81e",
