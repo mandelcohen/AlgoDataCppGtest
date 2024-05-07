@@ -1,12 +1,13 @@
 file(GLOB SRCS *.cpp)
 
-ADD_EXECUTABLE(class_library_tests ${SRCS})
+ADD_EXECUTABLE(class_library_tests ${SRCS}
+        TurboSort.Tests.cpp)
 enable_testing()
 
 TARGET_LINK_LIBRARIES(
     class_library_tests
     CLASS_LIBRARY
-    gtest_main
+    gmock_main
 )
 
 include(GoogleTest)
