@@ -3,11 +3,84 @@
 #include "TurboCollections.hpp"
 #include "TurboLinkedStack.h"
 #include "TurboLinkedQueue.h"
+#include "TurboSort.h"
 
 using namespace TurboCollections;
 using namespace TurboStack;
 using namespace TurboQueue;
+using namespace TurboSort;
 
+int main()
+{
+    std::cout << "SelectionSort: " << std::endl;
+    std::vector<int> selection;
+    selection.push_back(5);
+    selection.push_back(2);
+    selection.push_back(4);
+    selection.push_back(6);
+    selection.push_back(1);
+    selection.push_back(3);
+    for (auto val: selection) {
+        std::cout << val << " ";
+    }
+    std::cout << endl;
+
+    TurboSort::Sort::SelectionSort(selection);
+    for (auto val: selection) {
+        std::cout << val << " ";
+    }
+    std::cout << endl;
+    std::cout << endl;
+
+    std::cout << "BubbleSort: " << std::endl;
+    std::vector<int> bubbles;
+    bubbles.push_back(5);
+    bubbles.push_back(1);
+    bubbles.push_back(12);
+    bubbles.push_back(-5);
+    bubbles.push_back(16);
+    for (auto val: bubbles) {
+        std::cout << val << " ";
+    }
+    std::cout << endl;
+
+    TurboSort::Sort::BubbleSort(bubbles);
+    for (auto val: bubbles) {
+        std::cout << val << " ";
+    }
+    std::cout << endl;
+    std::cout << endl;
+
+    std::cout << "QuickSort: " << std::endl;
+    std::vector<int> quickies;
+    quickies.push_back(9);
+    quickies.push_back(-3);
+    quickies.push_back(5);
+    quickies.push_back(2);
+    quickies.push_back(6);
+    quickies.push_back(8);
+    quickies.push_back(-6);
+    quickies.push_back(1);
+    quickies.push_back(3);
+
+    for (auto val: quickies) {
+        std::cout << val << " ";
+    }
+    std::cout << endl;
+
+    TurboSort::Sort::QuickSort(quickies, 0, quickies.size()-1);
+    for (auto val: quickies) {
+        std::cout << val << " ";
+    }
+    std::cout << endl;
+    std::cout << endl;;
+
+    return 0;
+}
+
+
+
+/*
 // SpotifySongQueue
 int main()
 {
@@ -53,7 +126,7 @@ int main()
     }
     return 0;
 }
-
+*/
 
 /*
 // Preliminary "Tests" TurboQueue (Awaiting help getting gmock to test collections)
