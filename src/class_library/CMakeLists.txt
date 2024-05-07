@@ -7,6 +7,8 @@ set(CLASS_LIBRARY_SRCS
         TurboLinkedList.cpp
         TurboLinkedQueue.h
         TurboLinkedQueue.cpp
+        TurboSort.cpp
+        TurboSort.h
 )
 
 # Declare the library
