@@ -17,7 +17,7 @@
 		"files" : 
 		[
 			"tests/class_library_tests/CMakeLists.txt",
-			"cmake-build-debug/_deps/googletest-src/googletest/CMakeLists.txt"
+			"cmake-build-debug/_deps/googletest-src/googlemock/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -33,7 +33,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 6,
+				"line" : 7,
 				"parent" : 0
 			},
 			{
@@ -42,7 +42,13 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 146,
+				"line" : 105,
+				"parent" : 3
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 102,
 				"parent" : 3
 			}
 		]
@@ -61,6 +67,16 @@
 				{
 					"backtrace" : 2,
 					"path" : "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/src/class_library"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/_deps/googletest-src/googlemock/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/_deps/googletest-src/googlemock"
 				},
 				{
 					"backtrace" : 2,
@@ -85,7 +101,8 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2
 			]
 		}
 	],
@@ -97,11 +114,15 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "gtest::@1ea2dfc0605fe3ab2a3f"
+			"id" : "gmock::@0f7bb11d64f3678238c7"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "gtest_main::@1ea2dfc0605fe3ab2a3f"
+			"id" : "gmock_main::@0f7bb11d64f3678238c7"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "gtest::@1ea2dfc0605fe3ab2a3f"
 		}
 	],
 	"id" : "class_library_tests::@00a3b611e7cb6a19b81e",
@@ -124,11 +145,16 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "lib/libgtest_maind.a",
+				"fragment" : "lib/libgmock_maind.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 4,
+				"fragment" : "lib/libgmockd.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
 				"fragment" : "lib/libgtestd.a",
 				"role" : "libraries"
 			}
@@ -149,12 +175,19 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2
 			]
 		}
 	],
 	"sources" : 
 	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "tests/class_library_tests/TurboSort.Tests.cpp",
+			"sourceGroupIndex" : 0
+		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,

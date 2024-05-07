@@ -7,7 +7,8 @@ namespace TurboSort
 {
     class Sort
     {
-        static int Partition(std::vector<int> &list, int low, int high)
+        Sort() = delete;
+        static int Partition(std::vector<int>& list, int low, int high)
         {
             int pivot = list[high];
             int i = low;
@@ -23,7 +24,7 @@ namespace TurboSort
         }
 
     public:
-        static void SelectionSort(std::vector<int> &list){
+        static void SelectionSort(std::vector<int>& list){
             int min;
             for (int i = 0; i < list.size(); ++i)
             {
@@ -43,7 +44,7 @@ namespace TurboSort
             }
         }
 
-        static void BubbleSort(std::vector<int> &list){
+        static void BubbleSort(std::vector<int>& list){
             auto loop = list.size();
             for (int i = loop -1; i > 0; --i) {
                 bool swapped = false;
@@ -57,7 +58,7 @@ namespace TurboSort
         }
 
 
-        static void QuickSort(std::vector<int> &list, int low, int high)
+        static void QuickSort(std::vector<int>& list, int low, int high)
         {
             if(low <= high)
             {

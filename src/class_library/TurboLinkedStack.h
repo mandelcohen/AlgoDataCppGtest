@@ -120,9 +120,9 @@ bool TurboLinkedStack<T>::empty() const {
 
 template <typename T>
 size_t TurboLinkedStack<T>::size() {
-    size_t count = 0;
+    size_t count = 1;
     while(lastNode->Previous != nullptr){
-        count++;
+        ++count;
         lastNode = lastNode->Previous;
     }
     return count;
