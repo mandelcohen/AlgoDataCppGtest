@@ -89,7 +89,7 @@ namespace TurboQueue{
 
     template <typename T>
     size_t TurboLinkedQueue<T>::size() {
-        size_t count = 0;
+        size_t count = 1;
         while(firstNode->Next != nullptr){
             count++;
             firstNode = firstNode->Next;

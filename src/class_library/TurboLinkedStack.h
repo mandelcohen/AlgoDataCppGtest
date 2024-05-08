@@ -79,7 +79,7 @@ public:
 #pragma region Collection_Code
 // -------------- Turbo Linked Stack Code -----------------------
 template <typename T>
-void TurboLinkedStack<T>::push(const T &item)
+void TurboLinkedStack<T>::push(const T& item)
 {
     auto newNode = new Node<T>{item, nullptr};
     newNode->Previous = lastNode;
