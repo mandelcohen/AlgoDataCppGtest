@@ -3,6 +3,7 @@
 #include "gmock/gmock.h"
 #include "TurboCollections.hpp"
 #include "TurboLinkedStack.h"
+#include "TurboLinkedQueue.h"
 
 #define ALL_TESTS
 
@@ -10,7 +11,7 @@ using namespace TurboCollections;
 using namespace std;
 
 
-TEST(Turbo, AddCorrectlyToStack)
+TEST(TurboStack, AddCorrectlyToStack)
 {
     // given
     auto stack = new TurboStack::TurboLinkedStack<int>;
@@ -24,7 +25,7 @@ TEST(Turbo, AddCorrectlyToStack)
     ASSERT_THAT(   *stack,        testing::ElementsAre(3, 2, 1));
 }
 
-TEST(Turbo, PopAndPeekInStack)
+TEST(TurboStack, PopAndPeekInStack)
 {
     auto stack = new TurboStack::TurboLinkedStack<int>;
     stack->push(1);
@@ -38,7 +39,7 @@ TEST(Turbo, PopAndPeekInStack)
     ASSERT_THAT(*stack,        testing::ElementsAre(2, 1));
 }
 
-TEST(Turbo, StackSizeAndEmpty){
+TEST(TurboStack, StackSizeAndEmpty){
     auto stack = new TurboStack::TurboLinkedStack<int>;
     ASSERT_TRUE(stack->empty());
 
@@ -48,4 +49,33 @@ TEST(Turbo, StackSizeAndEmpty){
     ASSERT_FALSE(stack->empty());
 
     ASSERT_EQ(stack->size(), 3);
+}
+
+TEST(TurboQueue, AddCorrectlyToQueue)
+{
+    // given
+    auto queue = new TurboQueue::TurboLinkedQueue<int>;
+
+    // when
+    queue->enqueue(1);
+    queue->enqueue(2);
+    queue->enqueue(3);
+
+    // then       // actual         // expected
+    ASSERT_THAT(   *queue,        testing::ElementsAre(3, 2, 1));
+}
+
+TEST(TurboQueue, CheckFrontandDequeue)
+{
+    auto queue = new TurboQueue::TurboLinkedQueue<int>;
+    queue->enqueue(1);
+    queue->enqueue(2);
+    queue->enqueue(3);
+
+    ASSERT_EQ(queue->front(), 1);
+    ASSERT_EQ(queue->size(), 3);
+    
+    queue->dequeue();
+    ASSERT_EQ(queue->size(), 2);
+    ASSERT_EQ(queue->front(), 1);
 }
