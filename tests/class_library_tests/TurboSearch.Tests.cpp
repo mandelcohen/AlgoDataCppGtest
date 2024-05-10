@@ -10,36 +10,30 @@ TEST(TurboSearch, LinearSearch)
 {
     auto list = new std::vector<int>;
 
-    list->push_back(1);
-    list->push_back(2);
-    list->push_back(3);
-    list->push_back(4);
-    list->push_back(5);
-    list->push_back(7);
+    for (int i = 0; i < 1000; ++i) {
+        list->push_back(i);
+    }
 
     auto start_time = chrono::high_resolution_clock::now();
-    ASSERT_THAT( Search::LinearSearch(*list, 6)  ,  -1);
+    ASSERT_THAT( Search::LinearSearch(*list, -5)  ,  -1);
     auto end_time = chrono::high_resolution_clock::now();
-    cout << "Time: " << chrono::duration_cast<chrono::microseconds>(end_time - start_time).count() << " microseconds" << endl;
+    cout << "LinearSearch: " << chrono::duration_cast<chrono::microseconds>(end_time - start_time).count() << " microseconds" << endl;
 
-    ASSERT_THAT( Search::LinearSearch(*list, 7)  ,  5);
+    ASSERT_THAT( Search::LinearSearch(*list, 9)  ,  9);
 }
 
 TEST(TurboSearch, BinarySearch)
 {
     auto list = new std::vector<int>;
 
-    list->push_back(1);
-    list->push_back(2);
-    list->push_back(3);
-    list->push_back(4);
-    list->push_back(5);
-    list->push_back(7);
+    for (int i = 0; i < 1000; ++i) {
+        list->push_back(i);
+    }
 
     auto start_time = chrono::high_resolution_clock::now();
-    ASSERT_THAT( Search::BinarySearch(*list, 6)  ,  -1);
+    ASSERT_THAT( Search::BinarySearch(*list, -5)  ,  -1);
     auto end_time = chrono::high_resolution_clock::now();
-    cout << "Time: " << chrono::duration_cast<chrono::microseconds>(end_time - start_time).count() << " microseconds" << endl;
+    cout << "BinarySearch: " << chrono::duration_cast<chrono::microseconds>(end_time - start_time).count() << " microseconds" << endl;
 
-    ASSERT_THAT( Search::BinarySearch(*list, 7)  ,  5);
+    ASSERT_THAT( Search::BinarySearch(*list, 9)  ,  9);
 }
