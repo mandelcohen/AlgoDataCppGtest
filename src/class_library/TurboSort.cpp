@@ -1,7 +1,7 @@
 
 #include "TurboSort.h"
 
-TurboSort::Sort::Sort()  = delete;
+TurboSort::Sort::Sort()  = default;
 
 int TurboSort::Sort::Partition(std::vector<int>& list, int low, int high)
 {
