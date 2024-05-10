@@ -74,7 +74,7 @@ TEST(TurboQueue, CheckFrontandDequeue)
 
     ASSERT_EQ(queue->front(), 1);
     ASSERT_EQ(queue->size(), 3);
-    
+
     queue->dequeue();
     ASSERT_EQ(queue->size(), 2);
     ASSERT_EQ(queue->front(), 1);
