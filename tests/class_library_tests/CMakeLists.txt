@@ -2,7 +2,8 @@ file(GLOB SRCS *.cpp)
 
 ADD_EXECUTABLE(class_library_tests ${SRCS}
         TurboSort.Tests.cpp
-        TurboSearch.Tests.cpp)
+        TurboSearch.Tests.cpp
+        TurboBinarySearchTree.Tests.cpp)
 enable_testing()
 
 TARGET_LINK_LIBRARIES(
