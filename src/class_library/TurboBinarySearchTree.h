@@ -8,7 +8,7 @@ struct Node
     Node* right;
     Node* parent;
 
-    Node(const T& value) : data(value), left(nullptr), right(nullptr), parent(nullptr) {}
+    Node(const T& value, Node* parent) : data(value), left(nullptr), right(nullptr), parent(parent) {}
 };
 
 template<typename T>
@@ -70,7 +70,7 @@ void TurboBinarySearchTree<T>::Insert(const T& value)
 {
     if(root == nullptr)
     {
-        root = new Node(value);
+        root = new Node(value, nullptr);
     }
     else
     {
@@ -83,7 +83,7 @@ void TurboBinarySearchTree<T>::Insert(const T& value)
             {
                 if(current->right == nullptr)
                 {
-                    current->right = new Node(value);
+                    current->right = new Node(value, current);
                     leafFound = true;
                 }
                 else
@@ -95,7 +95,7 @@ void TurboBinarySearchTree<T>::Insert(const T& value)
             {
                 if(current->left == nullptr)
                 {
-                    current->left = new Node(value);
+                    current->left = new Node(value, current);
                     leafFound = true;
                 }
                 else
@@ -258,14 +258,36 @@ void TurboBinarySearchTree<T>::DeleteTree()
 template <typename T>
 typename TurboBinarySearchTree<T>::iterator TurboBinarySearchTree<T>::begin()
 {
-    return iterator{root};
+    if(root == nullptr || root->left == nullptr){
+        return iterator{root};
+    }
+    else
+    {
+        auto min = root->left;
+        while (min != nullptr)
+        {
+            min = min->left;
+        }
+        return iterator{min};
+    }
 }
 
 
 template <typename T>
 typename TurboBinarySearchTree<T>::const_iterator TurboBinarySearchTree<T>::begin() const
 {
-    return const_iterator{root};
+    if(root == nullptr || root->left == nullptr){
+        return const_iterator{root};
+    }
+    else
+    {
+        auto min = root->left;
+        while (min != nullptr)
+        {
+            min = min->left;
+        }
+        return const_iterator{min};
+    }
 }
 
 
@@ -313,14 +335,19 @@ typename TurboBinarySearchTree<T>::template Iterator<U>& TurboBinarySearchTree<T
 {
     if (current == nullptr) return *this;
 
-    if (current->right != nullptr) {
+    if (current->right != nullptr)
+    {
         current = current->right;
-        while (current->left != nullptr) {
+        while (current->left != nullptr)
+        {
             current = current->left;
         }
-    } else {
+    }
+    else
+    {
         Node* parent = current->parent;
-        while (parent != nullptr && current == parent->right) {
+        while (parent != nullptr && current == parent->right)
+        {
             current = parent;
             parent = parent->parent;
         }
