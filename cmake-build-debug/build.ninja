@@ -295,13 +295,6 @@ build src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboBinarySearchTree.cpp.o
   OBJECT_DIR = src/class_library/CMakeFiles/CLASS_LIBRARY.dir
   OBJECT_FILE_DIR = src/class_library/CMakeFiles/CLASS_LIBRARY.dir
 
-build src/class_library/CMakeFiles/CLASS_LIBRARY.dir/BST.cpp.o: CXX_COMPILER__CLASS_LIBRARY_unscanned_Debug /Users/mandel/Documents/Projects/AlgoTestsCppGtest/src/class_library/BST.cpp || cmake_object_order_depends_target_CLASS_LIBRARY
-  DEP_FILE = src/class_library/CMakeFiles/CLASS_LIBRARY.dir/BST.cpp.o.d
-  FLAGS = -g -std=gnu++14 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6 -fcolor-diagnostics
-  INCLUDES = -I/Users/mandel/Documents/Projects/AlgoTestsCppGtest/src/class_library
-  OBJECT_DIR = src/class_library/CMakeFiles/CLASS_LIBRARY.dir
-  OBJECT_FILE_DIR = src/class_library/CMakeFiles/CLASS_LIBRARY.dir
-
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target CLASS_LIBRARY
@@ -310,7 +303,7 @@ build src/class_library/CMakeFiles/CLASS_LIBRARY.dir/BST.cpp.o: CXX_COMPILER__CL
 #############################################
 # Link the static library src/class_library/libCLASS_LIBRARY.a
 
-build src/class_library/libCLASS_LIBRARY.a: CXX_STATIC_LIBRARY_LINKER__CLASS_LIBRARY_Debug src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboCollections.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboLinkedStack.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboLinkedList.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboLinkedQueue.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboSort.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboSearch.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboBinarySearchTree.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/BST.cpp.o
+build src/class_library/libCLASS_LIBRARY.a: CXX_STATIC_LIBRARY_LINKER__CLASS_LIBRARY_Debug src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboCollections.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboLinkedStack.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboLinkedList.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboLinkedQueue.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboSort.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboSearch.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboBinarySearchTree.cpp.o
   ARCH_FLAGS = -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = src/class_library/CMakeFiles/CLASS_LIBRARY.dir
