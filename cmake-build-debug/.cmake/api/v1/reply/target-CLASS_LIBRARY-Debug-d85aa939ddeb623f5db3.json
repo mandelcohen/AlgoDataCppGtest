@@ -26,13 +26,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 17,
+				"line" : 20,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 25,
+				"line" : 28,
 				"parent" : 0
 			}
 		]
@@ -69,7 +69,8 @@
 				5,
 				7,
 				8,
-				10
+				10,
+				12
 			]
 		}
 	],
@@ -92,7 +93,8 @@
 				4,
 				6,
 				9,
-				11
+				11,
+				13
 			]
 		},
 		{
@@ -104,7 +106,8 @@
 				5,
 				7,
 				8,
-				10
+				10,
+				12
 			]
 		}
 	],
@@ -174,6 +177,17 @@
 		{
 			"backtrace" : 1,
 			"path" : "src/class_library/TurboSearch.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/class_library/TurboBinarySearchTree.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/class_library/TurboBinarySearchTree.h",
 			"sourceGroupIndex" : 0
 		}
 	],

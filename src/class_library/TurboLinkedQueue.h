@@ -40,6 +40,7 @@ namespace TurboQueue{
 
 #pragma region Collection_Code
 // ----------- (Start) The "Real" Collection Code ---------------
+
         bool empty() const;
 // returns the current amount of items contained in the queue.
         size_t size();
@@ -50,6 +51,7 @@ namespace TurboQueue{
         const T& front() const;
 // removes the item from the front of the queue.
         void dequeue();
+
 // ----------- (End) The "Real" Collection Code ---------------
 #pragma endregion Collection_Code
 

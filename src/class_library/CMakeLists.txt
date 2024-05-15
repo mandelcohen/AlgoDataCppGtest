@@ -11,6 +11,9 @@ set(CLASS_LIBRARY_SRCS
         TurboSort.h
         TurboSearch.cpp
         TurboSearch.h
+        TurboBinarySearchTree.cpp
+        TurboBinarySearchTree.h
+        TurboBinarySearchTree.h
 )
 
 # Declare the library

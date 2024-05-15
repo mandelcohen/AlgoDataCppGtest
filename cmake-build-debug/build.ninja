@@ -288,6 +288,13 @@ build src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboSearch.cpp.o: CXX_COMP
   OBJECT_DIR = src/class_library/CMakeFiles/CLASS_LIBRARY.dir
   OBJECT_FILE_DIR = src/class_library/CMakeFiles/CLASS_LIBRARY.dir
 
+build src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboBinarySearchTree.cpp.o: CXX_COMPILER__CLASS_LIBRARY_unscanned_Debug /Users/mandel/Documents/Projects/AlgoTestsCppGtest/src/class_library/TurboBinarySearchTree.cpp || cmake_object_order_depends_target_CLASS_LIBRARY
+  DEP_FILE = src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboBinarySearchTree.cpp.o.d
+  FLAGS = -g -std=gnu++14 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6 -fcolor-diagnostics
+  INCLUDES = -I/Users/mandel/Documents/Projects/AlgoTestsCppGtest/src/class_library
+  OBJECT_DIR = src/class_library/CMakeFiles/CLASS_LIBRARY.dir
+  OBJECT_FILE_DIR = src/class_library/CMakeFiles/CLASS_LIBRARY.dir
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target CLASS_LIBRARY
@@ -296,7 +303,7 @@ build src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboSearch.cpp.o: CXX_COMP
 #############################################
 # Link the static library src/class_library/libCLASS_LIBRARY.a
 
-build src/class_library/libCLASS_LIBRARY.a: CXX_STATIC_LIBRARY_LINKER__CLASS_LIBRARY_Debug src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboCollections.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboLinkedStack.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboLinkedList.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboLinkedQueue.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboSort.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboSearch.cpp.o
+build src/class_library/libCLASS_LIBRARY.a: CXX_STATIC_LIBRARY_LINKER__CLASS_LIBRARY_Debug src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboCollections.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboLinkedStack.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboLinkedList.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboLinkedQueue.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboSort.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboSearch.cpp.o src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboBinarySearchTree.cpp.o
   ARCH_FLAGS = -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = src/class_library/CMakeFiles/CLASS_LIBRARY.dir
@@ -856,6 +863,13 @@ build _deps/googletest-build/googletest/install/strip: phony _deps/googletest-bu
 
 build cmake_object_order_depends_target_class_library_tests: phony || cmake_object_order_depends_target_CLASS_LIBRARY cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gmock_main cmake_object_order_depends_target_gtest
 
+build tests/class_library_tests/CMakeFiles/class_library_tests.dir/TurboBinarySearchTree.Tests.cpp.o: CXX_COMPILER__class_library_tests_unscanned_Debug /Users/mandel/Documents/Projects/AlgoTestsCppGtest/tests/class_library_tests/TurboBinarySearchTree.Tests.cpp || cmake_object_order_depends_target_class_library_tests
+  DEP_FILE = tests/class_library_tests/CMakeFiles/class_library_tests.dir/TurboBinarySearchTree.Tests.cpp.o.d
+  FLAGS = -g -std=gnu++11 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6 -fcolor-diagnostics
+  INCLUDES = -I/Users/mandel/Documents/Projects/AlgoTestsCppGtest/src/class_library -isystem /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/_deps/googletest-src/googlemock/include -isystem /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/_deps/googletest-src/googlemock -isystem /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/_deps/googletest-src/googletest/include -isystem /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/_deps/googletest-src/googletest
+  OBJECT_DIR = tests/class_library_tests/CMakeFiles/class_library_tests.dir
+  OBJECT_FILE_DIR = tests/class_library_tests/CMakeFiles/class_library_tests.dir
+
 build tests/class_library_tests/CMakeFiles/class_library_tests.dir/TurboSearch.Tests.cpp.o: CXX_COMPILER__class_library_tests_unscanned_Debug /Users/mandel/Documents/Projects/AlgoTestsCppGtest/tests/class_library_tests/TurboSearch.Tests.cpp || cmake_object_order_depends_target_class_library_tests
   DEP_FILE = tests/class_library_tests/CMakeFiles/class_library_tests.dir/TurboSearch.Tests.cpp.o.d
   FLAGS = -g -std=gnu++11 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6 -fcolor-diagnostics
@@ -892,7 +906,7 @@ build tests/class_library_tests/CMakeFiles/class_library_tests.dir/main.cpp.o: C
 #############################################
 # Link the executable tests/class_library_tests/class_library_tests
 
-build tests/class_library_tests/class_library_tests tests/class_library_tests/class_library_tests[1]_tests.cmake | ${cmake_ninja_workdir}tests/class_library_tests/class_library_tests[1]_tests.cmake: CXX_EXECUTABLE_LINKER__class_library_tests_Debug tests/class_library_tests/CMakeFiles/class_library_tests.dir/TurboSearch.Tests.cpp.o tests/class_library_tests/CMakeFiles/class_library_tests.dir/TurboSort.Tests.cpp.o tests/class_library_tests/CMakeFiles/class_library_tests.dir/TurboTest.cpp.o tests/class_library_tests/CMakeFiles/class_library_tests.dir/main.cpp.o | src/class_library/libCLASS_LIBRARY.a lib/libgmock_maind.a lib/libgmockd.a lib/libgtestd.a || lib/libgmock_maind.a lib/libgmockd.a lib/libgtestd.a src/class_library/libCLASS_LIBRARY.a
+build tests/class_library_tests/class_library_tests tests/class_library_tests/class_library_tests[1]_tests.cmake | ${cmake_ninja_workdir}tests/class_library_tests/class_library_tests[1]_tests.cmake: CXX_EXECUTABLE_LINKER__class_library_tests_Debug tests/class_library_tests/CMakeFiles/class_library_tests.dir/TurboBinarySearchTree.Tests.cpp.o tests/class_library_tests/CMakeFiles/class_library_tests.dir/TurboSearch.Tests.cpp.o tests/class_library_tests/CMakeFiles/class_library_tests.dir/TurboSort.Tests.cpp.o tests/class_library_tests/CMakeFiles/class_library_tests.dir/TurboTest.cpp.o tests/class_library_tests/CMakeFiles/class_library_tests.dir/main.cpp.o | src/class_library/libCLASS_LIBRARY.a lib/libgmock_maind.a lib/libgmockd.a lib/libgtestd.a || lib/libgmock_maind.a lib/libgmockd.a lib/libgtestd.a src/class_library/libCLASS_LIBRARY.a
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=13.6
   LINK_LIBRARIES = src/class_library/libCLASS_LIBRARY.a  lib/libgmock_maind.a  lib/libgmockd.a  lib/libgtestd.a
   OBJECT_DIR = tests/class_library_tests/CMakeFiles/class_library_tests.dir
