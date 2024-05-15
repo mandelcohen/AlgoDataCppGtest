@@ -62,7 +62,7 @@ TEST(TurboQueue, AddCorrectlyToQueue)
     queue->enqueue(3);
 
     // then       // actual         // expected
-    ASSERT_THAT(   *queue,        testing::ElementsAre(3, 2, 1));
+    ASSERT_THAT(   *queue,        testing::ElementsAre(1, 2, 3));
 }
 
 TEST(TurboQueue, CheckFrontandDequeue)

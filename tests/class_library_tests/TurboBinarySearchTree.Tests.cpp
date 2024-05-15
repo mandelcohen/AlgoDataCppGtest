@@ -3,11 +3,9 @@
 #include "TurboBinarySearchTree.h"
 
 
-#define ALL_TESTS
-
 TEST(BST, TestInsertAndSearch)
 {
-    auto tree = new TurboBinarySearchTree<int>;
+    auto tree = new TurboBinarySearchTree<int>();
 
     tree->Insert(4); tree->Insert(2); tree->Insert(6);
     tree->Insert(1); tree->Insert(3); tree->Insert(5); tree->Insert(7);
@@ -26,5 +24,26 @@ TEST(BST, TestDeleteValueNoChild)
 
     ASSERT_FALSE(tree->Delete(8));
     ASSERT_TRUE(tree->Delete(7));
+    ASSERT_THAT(*tree, testing::ElementsAre(1, 2, 3, 4, 5, 6));
+}
 
+TEST(BST, TestDeleteValueOneChild)
+{
+    auto tree = new TurboBinarySearchTree<int>;
+
+    tree->Insert(4); tree->Insert(2); tree->Insert(6);
+    tree->Insert(3); tree->Insert(5); tree->Insert(7);
+
+    ASSERT_TRUE(tree->Delete(2));
+}
+
+TEST(BST, TestDeleteValueTwoChildren)
+{
+    auto tree = new TurboBinarySearchTree<int>;
+
+    tree->Insert(4); tree->Insert(2); tree->Insert(6);
+    tree->Insert(1); tree->Insert(3); tree->Insert(5); tree->Insert(7);
+
+    ASSERT_TRUE(tree->Delete(2));
+    ASSERT_THAT(*tree, testing::ElementsAre(1, 3, 4, 5, 6, 7));
 }
