@@ -107,6 +107,8 @@ void TurboBinarySearchTree<T>::Insert(const T& value)
             }
         }
     }
+    elements.clear();
+    InorderTraversal(root);
 }
 
 template <typename T>
@@ -226,6 +228,8 @@ bool TurboBinarySearchTree<T>::Delete(const T& value)
     }
 
     delete toDelete;
+    elements.clear();
+    InorderTraversal(root);
     return true;
 }
 
@@ -237,7 +241,6 @@ void TurboBinarySearchTree<T>::InorderTraversal(TurboBinarySearchTree::Node* nod
     InorderTraversal(node->left);
     elements.push_back(node->data);
     InorderTraversal(node->right);
-
 }
 
 template <typename T>
@@ -277,15 +280,13 @@ typename TurboBinarySearchTree<T>::iterator TurboBinarySearchTree<T>::end()
 template <typename T>
 typename TurboBinarySearchTree<T>::const_iterator TurboBinarySearchTree<T>::begin() const
 {
-    auto const_iterator = Iterator<const T>(elements.begin());
-    return const_iterator;
+    return Iterator<const T>(elements.begin());
 }
 
 template <typename T>
 typename TurboBinarySearchTree<T>::const_iterator TurboBinarySearchTree<T>::end() const
 {
-    auto const_iterator = Iterator<const T>(elements.end());
-    return const_iterator;
+    return Iterator<const T>(elements.end());;
 }
 
 
