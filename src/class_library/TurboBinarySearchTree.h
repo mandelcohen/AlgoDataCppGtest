@@ -246,7 +246,12 @@ void TurboBinarySearchTree<T>::InorderTraversal(TurboBinarySearchTree::Node* nod
 template <typename T>
 TurboBinarySearchTree<T> TurboBinarySearchTree<T>::Clone()
 {
-
+    auto newTree = new TurboBinarySearchTree<T>();
+    for (const auto &item: elements)
+    {
+        newTree->Insert(item);
+    }
+    return *newTree;
 }
 
 template <typename T>
