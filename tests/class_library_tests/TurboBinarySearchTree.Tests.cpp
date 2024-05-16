@@ -35,6 +35,7 @@ TEST(BST, TestDeleteValueOneChild)
     tree->Insert(3); tree->Insert(5); tree->Insert(7);
 
     ASSERT_TRUE(tree->Delete(2));
+    ASSERT_THAT(*tree, testing::ElementsAre(3, 4, 5, 6, 7));
 }
 
 TEST(BST, TestDeleteValueTwoChildren)
