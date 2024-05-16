@@ -16,7 +16,7 @@ namespace TurboQueue{
     public:
         template<typename>
         class Iterator;
-        Node<T> *firstNode{};
+        Node<T>* firstNode{};
 
 
 #pragma region Type_Names
@@ -92,9 +92,10 @@ namespace TurboQueue{
     template <typename T>
     size_t TurboLinkedQueue<T>::size() {
         size_t count = 1;
-        while(firstNode->Next != nullptr){
+        auto current = firstNode;
+        while(current->Next != nullptr){
             count++;
-            firstNode = firstNode->Next;
+            current = current->Next;
         }
         return count;
     }
