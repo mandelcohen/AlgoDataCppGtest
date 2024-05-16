@@ -63,6 +63,7 @@ TEST(TurboQueue, AddCorrectlyToQueue)
 
     // then       // actual         // expected
     ASSERT_THAT(   *queue,        testing::ElementsAre(1, 2, 3));
+    ASSERT_EQ(queue->front(), 1);
 }
 
 TEST(TurboQueue, CheckFrontandDequeue)
@@ -77,5 +78,5 @@ TEST(TurboQueue, CheckFrontandDequeue)
 
     queue->dequeue();
     ASSERT_EQ(queue->size(), 2);
-    ASSERT_EQ(queue->front(), 1);
+    ASSERT_EQ(queue->front(), 2);
 }
