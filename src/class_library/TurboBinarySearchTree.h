@@ -1,3 +1,5 @@
+#include <vector>
+
 #pragma once
 
 template<typename T>
@@ -6,9 +8,8 @@ struct Node
     T data;
     Node* left;
     Node* right;
-    Node* parent;
 
-    Node(const T& value, Node* parent) : data(value), left(nullptr), right(nullptr), parent(parent) {}
+    Node(const T& value) : data(value), left(nullptr), right(nullptr) {}
 };
 
 template<typename T>
@@ -18,7 +19,7 @@ public:
     template<typename>
     class Iterator;
     Node<T>* root;
-
+    std::vector<T> elements;
 
 #pragma region Type_Names
 // ----------- (Start) Type Name Definitions (used by GMock) ------------
@@ -35,6 +36,7 @@ public:
     void Insert(const T& value);
     bool Search(const T& value);
     bool Delete(const T& value);
+    void InorderTraversal(Node* node);
     TurboBinarySearchTree<T> Clone();
     void DeleteTree();
 // ----------- (End) The "Real" Collection Code ---------------
@@ -50,9 +52,9 @@ public:
     template<typename U>
     class Iterator
     {
-        Node* current;
+        typename std::vector<const T>::const_iterator current;
     public:
-        Iterator(Node* node);
+        Iterator(typename std::vector<const T>::const_iterator iter) : current(iter) {}
         bool operator ==(const Iterator& other) const;
         bool operator !=(const Iterator& other) const;
         Iterator& operator ++();
@@ -70,7 +72,7 @@ void TurboBinarySearchTree<T>::Insert(const T& value)
 {
     if(root == nullptr)
     {
-        root = new Node(value, nullptr);
+        root = new Node(value);
     }
     else
     {
@@ -83,7 +85,7 @@ void TurboBinarySearchTree<T>::Insert(const T& value)
             {
                 if(current->right == nullptr)
                 {
-                    current->right = new Node(value, current);
+                    current->right = new Node(value);
                     leafFound = true;
                 }
                 else
@@ -95,7 +97,7 @@ void TurboBinarySearchTree<T>::Insert(const T& value)
             {
                 if(current->left == nullptr)
                 {
-                    current->left = new Node(value, current);
+                    current->left = new Node(value);
                     leafFound = true;
                 }
                 else
@@ -104,9 +106,7 @@ void TurboBinarySearchTree<T>::Insert(const T& value)
                 }
             }
         }
-
     }
-
 }
 
 template <typename T>
@@ -138,7 +138,6 @@ bool TurboBinarySearchTree<T>::Delete(const T& value)
     Node* toDelete = root;
     Node* parent = nullptr;
 
-    // Find the node to delete
     while(toDelete != nullptr && toDelete->data != value){
         parent = toDelete;
         if(toDelete->data < value)
@@ -151,19 +150,17 @@ bool TurboBinarySearchTree<T>::Delete(const T& value)
         }
     }
 
-    // If the value is not found, return false
     if(toDelete == nullptr)
     {
         return false;
     }
 
-    // Handle root deletion separately
     if(toDelete == root)
     {
         root = nullptr;
     }
 
-        // Case 1: Node to delete has no children
+        //  no children
     else if(toDelete->left == nullptr && toDelete->right == nullptr)
     {
         if(parent->left == toDelete)
@@ -176,7 +173,7 @@ bool TurboBinarySearchTree<T>::Delete(const T& value)
         }
     }
 
-        // Case 2: Node to delete has only one child
+        //  one child
     else if(toDelete->left == nullptr)
     {
         if(parent->left == toDelete)
@@ -200,7 +197,7 @@ bool TurboBinarySearchTree<T>::Delete(const T& value)
         }
     }
 
-        // Case 3: Node to delete has two children
+        // two children
     else
     {
         Node* min = toDelete->right;
@@ -211,7 +208,6 @@ bool TurboBinarySearchTree<T>::Delete(const T& value)
             min = min->left;
         }
 
-        // Replace toDelete with min
         if(parent->left == toDelete)
         {
             parent->left = min;
@@ -221,7 +217,6 @@ bool TurboBinarySearchTree<T>::Delete(const T& value)
             parent->right = min;
         }
 
-        // Update pointers to the left subtree of min
         if(minParent != toDelete)
         {
             minParent->left = min->right;
@@ -232,6 +227,17 @@ bool TurboBinarySearchTree<T>::Delete(const T& value)
 
     delete toDelete;
     return true;
+}
+
+template <typename T>
+void TurboBinarySearchTree<T>::InorderTraversal(TurboBinarySearchTree::Node* node)
+{
+    if(node == nullptr)
+        return;
+    InorderTraversal(node->left);
+    elements.push_back(node->data);
+    InorderTraversal(node->right);
+
 }
 
 template <typename T>
@@ -258,58 +264,28 @@ void TurboBinarySearchTree<T>::DeleteTree()
 template <typename T>
 typename TurboBinarySearchTree<T>::iterator TurboBinarySearchTree<T>::begin()
 {
-    if(root == nullptr || root->left == nullptr){
-        return iterator{root};
-    }
-    else
-    {
-        auto min = root->left;
-        while (min != nullptr)
-        {
-            min = min->left;
-        }
-        return iterator{min};
-    }
+
+    return Iterator<T>(elements.begin());
 }
-
-
-template <typename T>
-typename TurboBinarySearchTree<T>::const_iterator TurboBinarySearchTree<T>::begin() const
-{
-    if(root == nullptr || root->left == nullptr){
-        return const_iterator{root};
-    }
-    else
-    {
-        auto min = root->left;
-        while (min != nullptr)
-        {
-            min = min->left;
-        }
-        return const_iterator{min};
-    }
-}
-
 
 template <typename T>
 typename TurboBinarySearchTree<T>::iterator TurboBinarySearchTree<T>::end()
 {
-    return iterator{nullptr};
+    return Iterator<T>(elements.end());
+}
+
+template <typename T>
+typename TurboBinarySearchTree<T>::const_iterator TurboBinarySearchTree<T>::begin() const
+{
+    auto const_iterator = Iterator<const T>(elements.begin());
+    return const_iterator;
 }
 
 template <typename T>
 typename TurboBinarySearchTree<T>::const_iterator TurboBinarySearchTree<T>::end() const
 {
-    return const_iterator{nullptr};
-}
-
-
-
-template <typename T>
-template <typename U>
-TurboBinarySearchTree<T>::Iterator<U>::Iterator(Node* first)
-{
-    current = first;
+    auto const_iterator = Iterator<const T>(elements.end());
+    return const_iterator;
 }
 
 
@@ -333,26 +309,7 @@ template <typename T>
 template <typename U>
 typename TurboBinarySearchTree<T>::template Iterator<U>& TurboBinarySearchTree<T>::Iterator<U>::operator++()
 {
-    if (current == nullptr) return *this;
-
-    if (current->right != nullptr)
-    {
-        current = current->right;
-        while (current->left != nullptr)
-        {
-            current = current->left;
-        }
-    }
-    else
-    {
-        Node* parent = current->parent;
-        while (parent != nullptr && current == parent->right)
-        {
-            current = parent;
-            parent = parent->parent;
-        }
-        current = parent;
-    }
+    ++current;
     return *this;
 }
 
@@ -360,7 +317,7 @@ template <typename T>
 template <typename U>
 U& TurboBinarySearchTree<T>::Iterator<U>::operator*() const
 {
-    return current->data;
+    return *current;
 }
 
 #pragma endregion Iterator_Pattern
