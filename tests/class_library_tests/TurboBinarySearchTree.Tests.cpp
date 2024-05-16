@@ -48,3 +48,16 @@ TEST(BST, TestDeleteValueTwoChildren)
     ASSERT_TRUE(tree->Delete(2));
     ASSERT_THAT(*tree, testing::ElementsAre(1, 3, 4, 5, 6, 7));
 }
+
+TEST(BST, TestCloningTree)
+{
+    auto tree = new TurboBinarySearchTree<int>;
+
+    tree->Insert(4); tree->Insert(2); tree->Insert(6);
+    tree->Insert(1); tree->Insert(3); tree->Insert(5); tree->Insert(7);
+
+    auto newTree = tree->Clone();
+
+    ASSERT_THAT(*tree,   testing::ElementsAre(1, 2, 3, 4, 5, 6, 7));
+    ASSERT_THAT(newTree, testing::ElementsAre(1, 2, 3, 4, 5, 6, 7));
+}
