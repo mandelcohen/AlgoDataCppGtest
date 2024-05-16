@@ -39,11 +39,14 @@ public:
     void InorderTraversal(Node* node);
     TurboBinarySearchTree<T> Clone();
     void DeleteTree();
+private:
+    void DeleteTree(Node* node);
 // ----------- (End) The "Real" Collection Code ---------------
 #pragma endregion Collection_Code
 
 #pragma region Iterator_Pattern
 // ---------------  (Start) Iterator Pattern Code -------------------
+public:
     iterator begin();
     const_iterator begin() const;
     iterator end();
@@ -257,9 +260,23 @@ TurboBinarySearchTree<T> TurboBinarySearchTree<T>::Clone()
 template <typename T>
 void TurboBinarySearchTree<T>::DeleteTree()
 {
-
+    DeleteTree(root);
+    elements.clear();
+    root = nullptr;
 }
 
+template <typename T>
+void TurboBinarySearchTree<T>::DeleteTree(TurboBinarySearchTree::Node* node)
+{
+    if (node == nullptr)
+    {
+        return;
+    }
+    DeleteTree(node->left);
+    DeleteTree(node->right);
+
+    delete node;
+}
 
 
 #pragma endregion Collection_Code

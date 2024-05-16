@@ -1,2 +1,18 @@
 vector3.hello_this_is_a_test 1 0.00976913
+BST.TestInsertAndSearch 3 0.00236256
+BST.TestDeleteValueNoChild 3 0.00212446
+BST.TestDeleteValueOneChild 3 0.002552
+BST.TestDeleteValueTwoChildren 3 0.00225884
+BST.TestCloningTree 3 0.00231221
+BST.TestDeletingTree 1 0.00744413
+TurboSearch.LinearSearch 3 0.00205251
+TurboSearch.BinarySearch 3 0.00208549
+TurboSort.SelectionSort 3 0.00220235
+TurboSort.BubbleSort 3 0.00214144
+TurboSort.Quicksort 3 0.00199095
+TurboStack.AddCorrectlyToStack 3 0.00242241
+TurboStack.PopAndPeekInStack 3 0.00191119
+TurboStack.StackSizeAndEmpty 3 0.0020907
+TurboQueue.AddCorrectlyToQueue 3 0.00245368
+TurboQueue.CheckFrontandDequeue 1 0.00667407
 ---
