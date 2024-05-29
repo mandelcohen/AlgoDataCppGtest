@@ -96,7 +96,12 @@ TEST(BST, TestCloningTree)
     tree->Insert(4); tree->Insert(2); tree->Insert(6);
     tree->Insert(1); tree->Insert(3); tree->Insert(5); tree->Insert(7);
 
+    std::cout << "The original tree:" << std::endl;
+    tree->PrintTree();
+
     auto newTree = tree->Clone();
+    std::cout << "The cloned tree:" << std::endl;
+    newTree.PrintTree();
 
     ASSERT_THAT(*tree,   testing::ElementsAre(1, 2, 3, 4, 5, 6, 7));
     ASSERT_THAT(newTree, testing::ElementsAre(1, 2, 3, 4, 5, 6, 7));
