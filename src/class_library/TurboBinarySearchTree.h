@@ -1,4 +1,5 @@
 #include <vector>
+#include "iostream"
 
 #pragma once
 
@@ -40,8 +41,10 @@ public:
     void PreOrderTraversal(Node* node);
     TurboBinarySearchTree<T> Clone();
     void DeleteTree();
+    void PrintTree();
 private:
     void DeleteTree(Node* node);
+    void PrintTreeHelper(const std::string& prefix, const Node* node, bool isLeft);
 // ----------- (End) The "Real" Collection Code ---------------
 #pragma endregion Collection_Code
 
@@ -290,6 +293,26 @@ void TurboBinarySearchTree<T>::DeleteTree(TurboBinarySearchTree::Node* node)
     DeleteTree(node->right);
 
     delete node;
+}
+
+template <typename T>
+void TurboBinarySearchTree<T>::PrintTreeHelper(const std::string &prefix, const TurboBinarySearchTree::Node *node, bool isLeft)
+{
+    if (node != nullptr)
+    {
+        std::cout << prefix;
+        std::cout << (isLeft ? "|--" : "L--");
+        std::cout << node->data << std::endl;
+        // enter the next tree level - left and right branch
+        PrintTreeHelper(prefix + (isLeft ? "|   " : "    "), node->right, true);
+        PrintTreeHelper(prefix + (isLeft ? "|   " : "    "), node->left, false);
+    }
+}
+
+template <typename T>
+void TurboBinarySearchTree<T>::PrintTree()
+{
+    PrintTreeHelper("", root, false);
 }
 
 
