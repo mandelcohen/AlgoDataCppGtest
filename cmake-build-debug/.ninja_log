@@ -31,3 +31,7 @@
 683	750	1715851308209123598	src/main	8e2d9e971f3d4bab
 24	1628	1715854485522799393	src/CMakeFiles/main.dir/main.cpp.o	a50e07c0204f129f
 1628	1709	1715854485608638399	src/main	8e2d9e971f3d4bab
+21	6309	1716974072138705854	tests/class_library_tests/CMakeFiles/class_library_tests.dir/TurboBinarySearchTree.Tests.cpp.o	e42f33e72d3fb839
+6309	9447	1716974075285671823	tests/class_library_tests/class_library_tests	f5f5d45e29ffb169
+6309	9447	1716974075285671823	tests/class_library_tests/class_library_tests[1]_tests.cmake	f5f5d45e29ffb169
+6309	9447	1716974075285671823	/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests[1]_tests.cmake	f5f5d45e29ffb169

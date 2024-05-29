@@ -1,3 +1,461 @@
-Start testing: May 17 13:01 CEST
+Start testing: May 29 11:14 CEST
 ----------------------------------------------------------
-End testing: May 17 13:01 CEST
+1/17 Testing: BST.TestInsertAndSearch
+1/17 Test: BST.TestInsertAndSearch
+Command: "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests" "--gtest_filter=BST.TestInsertAndSearch" "--gtest_also_run_disabled_tests"
+Directory: /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests
+"BST.TestInsertAndSearch" start time: May 29 11:14 CEST
+Output:
+----------------------------------------------------------
+Note: Google Test filter = BST.TestInsertAndSearch
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BST
+[ RUN      ] BST.TestInsertAndSearch
+[       OK ] BST.TestInsertAndSearch (0 ms)
+[----------] 1 test from BST (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BST.TestInsertAndSearch" end time: May 29 11:14 CEST
+"BST.TestInsertAndSearch" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/17 Testing: BST.TestDeleteValueNoChild
+2/17 Test: BST.TestDeleteValueNoChild
+Command: "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests" "--gtest_filter=BST.TestDeleteValueNoChild" "--gtest_also_run_disabled_tests"
+Directory: /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests
+"BST.TestDeleteValueNoChild" start time: May 29 11:14 CEST
+Output:
+----------------------------------------------------------
+Note: Google Test filter = BST.TestDeleteValueNoChild
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BST
+[ RUN      ] BST.TestDeleteValueNoChild
+[       OK ] BST.TestDeleteValueNoChild (0 ms)
+[----------] 1 test from BST (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BST.TestDeleteValueNoChild" end time: May 29 11:14 CEST
+"BST.TestDeleteValueNoChild" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/17 Testing: BST.TestDeleteValueOneChild
+3/17 Test: BST.TestDeleteValueOneChild
+Command: "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests" "--gtest_filter=BST.TestDeleteValueOneChild" "--gtest_also_run_disabled_tests"
+Directory: /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests
+"BST.TestDeleteValueOneChild" start time: May 29 11:14 CEST
+Output:
+----------------------------------------------------------
+Note: Google Test filter = BST.TestDeleteValueOneChild
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BST
+[ RUN      ] BST.TestDeleteValueOneChild
+[       OK ] BST.TestDeleteValueOneChild (0 ms)
+[----------] 1 test from BST (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BST.TestDeleteValueOneChild" end time: May 29 11:14 CEST
+"BST.TestDeleteValueOneChild" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/17 Testing: BST.TestDeleteValueTwoChildren
+4/17 Test: BST.TestDeleteValueTwoChildren
+Command: "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests" "--gtest_filter=BST.TestDeleteValueTwoChildren" "--gtest_also_run_disabled_tests"
+Directory: /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests
+"BST.TestDeleteValueTwoChildren" start time: May 29 11:14 CEST
+Output:
+----------------------------------------------------------
+Note: Google Test filter = BST.TestDeleteValueTwoChildren
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BST
+[ RUN      ] BST.TestDeleteValueTwoChildren
+[       OK ] BST.TestDeleteValueTwoChildren (0 ms)
+[----------] 1 test from BST (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BST.TestDeleteValueTwoChildren" end time: May 29 11:14 CEST
+"BST.TestDeleteValueTwoChildren" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/17 Testing: BST.TestDeleteRootValue
+5/17 Test: BST.TestDeleteRootValue
+Command: "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests" "--gtest_filter=BST.TestDeleteRootValue" "--gtest_also_run_disabled_tests"
+Directory: /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests
+"BST.TestDeleteRootValue" start time: May 29 11:14 CEST
+Output:
+----------------------------------------------------------
+Note: Google Test filter = BST.TestDeleteRootValue
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BST
+[ RUN      ] BST.TestDeleteRootValue
+/Users/mandel/Documents/Projects/AlgoTestsCppGtest/tests/class_library_tests/TurboBinarySearchTree.Tests.cpp:60: Failure
+Value of: *tree
+Expected: has 6 elements where
+element #0 is equal to 1,
+element #1 is equal to 2,
+element #2 is equal to 3,
+element #3 is equal to 5,
+element #4 is equal to 6,
+element #5 is equal to 7
+  Actual: {}
+[  FAILED  ] BST.TestDeleteRootValue (0 ms)
+[----------] 1 test from BST (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] BST.TestDeleteRootValue
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Failed.
+"BST.TestDeleteRootValue" end time: May 29 11:14 CEST
+"BST.TestDeleteRootValue" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/17 Testing: BST.TestCloningTree
+6/17 Test: BST.TestCloningTree
+Command: "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests" "--gtest_filter=BST.TestCloningTree" "--gtest_also_run_disabled_tests"
+Directory: /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests
+"BST.TestCloningTree" start time: May 29 11:14 CEST
+Output:
+----------------------------------------------------------
+Note: Google Test filter = BST.TestCloningTree
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BST
+[ RUN      ] BST.TestCloningTree
+[       OK ] BST.TestCloningTree (0 ms)
+[----------] 1 test from BST (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BST.TestCloningTree" end time: May 29 11:14 CEST
+"BST.TestCloningTree" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/17 Testing: BST.TestDeletingTree
+7/17 Test: BST.TestDeletingTree
+Command: "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests" "--gtest_filter=BST.TestDeletingTree" "--gtest_also_run_disabled_tests"
+Directory: /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests
+"BST.TestDeletingTree" start time: May 29 11:14 CEST
+Output:
+----------------------------------------------------------
+Note: Google Test filter = BST.TestDeletingTree
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from BST
+[ RUN      ] BST.TestDeletingTree
+[       OK ] BST.TestDeletingTree (0 ms)
+[----------] 1 test from BST (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"BST.TestDeletingTree" end time: May 29 11:14 CEST
+"BST.TestDeletingTree" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/17 Testing: TurboSearch.LinearSearch
+8/17 Test: TurboSearch.LinearSearch
+Command: "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests" "--gtest_filter=TurboSearch.LinearSearch" "--gtest_also_run_disabled_tests"
+Directory: /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests
+"TurboSearch.LinearSearch" start time: May 29 11:14 CEST
+Output:
+----------------------------------------------------------
+Note: Google Test filter = TurboSearch.LinearSearch
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TurboSearch
+[ RUN      ] TurboSearch.LinearSearch
+LinearSearch: 17 microseconds
+[       OK ] TurboSearch.LinearSearch (0 ms)
+[----------] 1 test from TurboSearch (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TurboSearch.LinearSearch" end time: May 29 11:14 CEST
+"TurboSearch.LinearSearch" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/17 Testing: TurboSearch.BinarySearch
+9/17 Test: TurboSearch.BinarySearch
+Command: "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests" "--gtest_filter=TurboSearch.BinarySearch" "--gtest_also_run_disabled_tests"
+Directory: /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests
+"TurboSearch.BinarySearch" start time: May 29 11:14 CEST
+Output:
+----------------------------------------------------------
+Note: Google Test filter = TurboSearch.BinarySearch
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TurboSearch
+[ RUN      ] TurboSearch.BinarySearch
+BinarySearch: 5 microseconds
+[       OK ] TurboSearch.BinarySearch (0 ms)
+[----------] 1 test from TurboSearch (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TurboSearch.BinarySearch" end time: May 29 11:14 CEST
+"TurboSearch.BinarySearch" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/17 Testing: TurboSort.SelectionSort
+10/17 Test: TurboSort.SelectionSort
+Command: "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests" "--gtest_filter=TurboSort.SelectionSort" "--gtest_also_run_disabled_tests"
+Directory: /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests
+"TurboSort.SelectionSort" start time: May 29 11:14 CEST
+Output:
+----------------------------------------------------------
+Note: Google Test filter = TurboSort.SelectionSort
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TurboSort
+[ RUN      ] TurboSort.SelectionSort
+[       OK ] TurboSort.SelectionSort (0 ms)
+[----------] 1 test from TurboSort (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TurboSort.SelectionSort" end time: May 29 11:14 CEST
+"TurboSort.SelectionSort" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/17 Testing: TurboSort.BubbleSort
+11/17 Test: TurboSort.BubbleSort
+Command: "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests" "--gtest_filter=TurboSort.BubbleSort" "--gtest_also_run_disabled_tests"
+Directory: /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests
+"TurboSort.BubbleSort" start time: May 29 11:14 CEST
+Output:
+----------------------------------------------------------
+Note: Google Test filter = TurboSort.BubbleSort
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TurboSort
+[ RUN      ] TurboSort.BubbleSort
+[       OK ] TurboSort.BubbleSort (0 ms)
+[----------] 1 test from TurboSort (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TurboSort.BubbleSort" end time: May 29 11:14 CEST
+"TurboSort.BubbleSort" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/17 Testing: TurboSort.Quicksort
+12/17 Test: TurboSort.Quicksort
+Command: "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests" "--gtest_filter=TurboSort.Quicksort" "--gtest_also_run_disabled_tests"
+Directory: /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests
+"TurboSort.Quicksort" start time: May 29 11:14 CEST
+Output:
+----------------------------------------------------------
+Note: Google Test filter = TurboSort.Quicksort
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TurboSort
+[ RUN      ] TurboSort.Quicksort
+[       OK ] TurboSort.Quicksort (0 ms)
+[----------] 1 test from TurboSort (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TurboSort.Quicksort" end time: May 29 11:14 CEST
+"TurboSort.Quicksort" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/17 Testing: TurboStack.AddCorrectlyToStack
+13/17 Test: TurboStack.AddCorrectlyToStack
+Command: "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests" "--gtest_filter=TurboStack.AddCorrectlyToStack" "--gtest_also_run_disabled_tests"
+Directory: /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests
+"TurboStack.AddCorrectlyToStack" start time: May 29 11:14 CEST
+Output:
+----------------------------------------------------------
+Note: Google Test filter = TurboStack.AddCorrectlyToStack
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TurboStack
+[ RUN      ] TurboStack.AddCorrectlyToStack
+[       OK ] TurboStack.AddCorrectlyToStack (0 ms)
+[----------] 1 test from TurboStack (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TurboStack.AddCorrectlyToStack" end time: May 29 11:14 CEST
+"TurboStack.AddCorrectlyToStack" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/17 Testing: TurboStack.PopAndPeekInStack
+14/17 Test: TurboStack.PopAndPeekInStack
+Command: "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests" "--gtest_filter=TurboStack.PopAndPeekInStack" "--gtest_also_run_disabled_tests"
+Directory: /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests
+"TurboStack.PopAndPeekInStack" start time: May 29 11:14 CEST
+Output:
+----------------------------------------------------------
+Note: Google Test filter = TurboStack.PopAndPeekInStack
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TurboStack
+[ RUN      ] TurboStack.PopAndPeekInStack
+[       OK ] TurboStack.PopAndPeekInStack (0 ms)
+[----------] 1 test from TurboStack (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TurboStack.PopAndPeekInStack" end time: May 29 11:14 CEST
+"TurboStack.PopAndPeekInStack" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/17 Testing: TurboStack.StackSizeAndEmpty
+15/17 Test: TurboStack.StackSizeAndEmpty
+Command: "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests" "--gtest_filter=TurboStack.StackSizeAndEmpty" "--gtest_also_run_disabled_tests"
+Directory: /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests
+"TurboStack.StackSizeAndEmpty" start time: May 29 11:14 CEST
+Output:
+----------------------------------------------------------
+Note: Google Test filter = TurboStack.StackSizeAndEmpty
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TurboStack
+[ RUN      ] TurboStack.StackSizeAndEmpty
+[       OK ] TurboStack.StackSizeAndEmpty (0 ms)
+[----------] 1 test from TurboStack (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TurboStack.StackSizeAndEmpty" end time: May 29 11:14 CEST
+"TurboStack.StackSizeAndEmpty" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/17 Testing: TurboQueue.AddCorrectlyToQueue
+16/17 Test: TurboQueue.AddCorrectlyToQueue
+Command: "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests" "--gtest_filter=TurboQueue.AddCorrectlyToQueue" "--gtest_also_run_disabled_tests"
+Directory: /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests
+"TurboQueue.AddCorrectlyToQueue" start time: May 29 11:14 CEST
+Output:
+----------------------------------------------------------
+Note: Google Test filter = TurboQueue.AddCorrectlyToQueue
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TurboQueue
+[ RUN      ] TurboQueue.AddCorrectlyToQueue
+[       OK ] TurboQueue.AddCorrectlyToQueue (0 ms)
+[----------] 1 test from TurboQueue (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TurboQueue.AddCorrectlyToQueue" end time: May 29 11:14 CEST
+"TurboQueue.AddCorrectlyToQueue" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/17 Testing: TurboQueue.CheckFrontandDequeue
+17/17 Test: TurboQueue.CheckFrontandDequeue
+Command: "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests" "--gtest_filter=TurboQueue.CheckFrontandDequeue" "--gtest_also_run_disabled_tests"
+Directory: /Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests
+"TurboQueue.CheckFrontandDequeue" start time: May 29 11:14 CEST
+Output:
+----------------------------------------------------------
+Note: Google Test filter = TurboQueue.CheckFrontandDequeue
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TurboQueue
+[ RUN      ] TurboQueue.CheckFrontandDequeue
+[       OK ] TurboQueue.CheckFrontandDequeue (0 ms)
+[----------] 1 test from TurboQueue (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"TurboQueue.CheckFrontandDequeue" end time: May 29 11:14 CEST
+"TurboQueue.CheckFrontandDequeue" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 29 11:14 CEST
