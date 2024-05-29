@@ -88,3 +88,17 @@ TEST(BST, TestDeletingTree)
     ASSERT_TRUE(tree->elements.empty());
 }
 
+TEST(BST, TestIterationOverTree)
+{
+    auto tree = new TurboBinarySearchTree<int>;
+
+    tree->Insert(4); tree->Insert(2); tree->Insert(6);
+    tree->Insert(1); tree->Insert(3); tree->Insert(5); tree->Insert(7);
+
+    ASSERT_THAT(*tree,   testing::ElementsAre(1, 2, 3, 4, 5, 6, 7));
+
+    for (auto i = 0; i < tree->elements.size(); ++i)
+    {
+        std::cout << tree->elements[i] << " ";
+    }
+}

@@ -37,6 +37,7 @@ public:
     bool Search(const T& value);
     bool Delete(const T& value);
     void InorderTraversal(Node* node);
+    void PreOrderTraversal(Node* node);
     TurboBinarySearchTree<T> Clone();
     void DeleteTree();
 private:
@@ -163,6 +164,9 @@ bool TurboBinarySearchTree<T>::Delete(const T& value)
     if(toDelete == root)
     {
         root = nullptr;
+
+
+        InorderTraversal(root);
     }
 
         //  no children
@@ -247,10 +251,20 @@ void TurboBinarySearchTree<T>::InorderTraversal(TurboBinarySearchTree::Node* nod
 }
 
 template <typename T>
+void TurboBinarySearchTree<T>::PreOrderTraversal(TurboBinarySearchTree::Node* node)
+{
+    if(node == nullptr)
+        return;
+    elements.push_back(node->data);
+    PreOrderTraversal(node->left);
+    PreOrderTraversal(node->right);
+}
+
+template <typename T>
 TurboBinarySearchTree<T> TurboBinarySearchTree<T>::Clone()
 {
     auto newTree = new TurboBinarySearchTree<T>();
-    for (const auto &item: elements)
+    for (auto &item: elements)
     {
         newTree->Insert(item);
     }
