@@ -21,6 +21,7 @@ public:
     class Iterator;
     Node<T>* root;
     std::vector<T> elements;
+    std::vector<T> values;
 
 #pragma region Type_Names
 // ----------- (Start) Type Name Definitions (used by GMock) ------------
@@ -266,7 +267,7 @@ void TurboBinarySearchTree<T>::PreOrderTraversal(TurboBinarySearchTree::Node* no
 {
     if(node == nullptr)
         return;
-    elements.push_back(node->data);
+    values.push_back(node->data);
     PreOrderTraversal(node->left);
     PreOrderTraversal(node->right);
 }
@@ -275,10 +276,12 @@ template <typename T>
 TurboBinarySearchTree<T> TurboBinarySearchTree<T>::Clone()
 {
     auto newTree = new TurboBinarySearchTree<T>();
-    for (auto &item: elements)
+    PreOrderTraversal(root);
+    for (auto n : values)
     {
-        newTree->Insert(item);
+        newTree->Insert(n);
     }
+
     return *newTree;
 }
 
