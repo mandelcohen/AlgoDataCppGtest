@@ -164,18 +164,14 @@ bool TurboBinarySearchTree<T>::Delete(const T& value)
         return false;
     }
 
-    if(toDelete == root)
-    {
-        root = nullptr;
-
-
-        InorderTraversal(root);
-    }
-
         //  no children
     else if(toDelete->left == nullptr && toDelete->right == nullptr)
     {
-        if(parent->left == toDelete)
+        if(toDelete == root)
+        {
+            root = nullptr;
+        }
+        else if(parent->left == toDelete)
         {
             parent->left = nullptr;
         }
@@ -188,7 +184,11 @@ bool TurboBinarySearchTree<T>::Delete(const T& value)
         //  one child
     else if(toDelete->left == nullptr)
     {
-        if(parent->left == toDelete)
+        if(toDelete == root)
+        {
+            root = toDelete->right;
+        }
+        else if(parent->left == toDelete)
         {
             parent->left = toDelete->right;
         }
@@ -199,6 +199,10 @@ bool TurboBinarySearchTree<T>::Delete(const T& value)
     }
     else if(toDelete->right == nullptr)
     {
+        if(toDelete == root)
+        {
+            root = toDelete->left;
+        }
         if(parent->left == toDelete)
         {
             parent->left = toDelete->left;
@@ -220,7 +224,18 @@ bool TurboBinarySearchTree<T>::Delete(const T& value)
             min = min->left;
         }
 
-        if(parent->left == toDelete)
+        if (minParent != toDelete)
+        {
+            minParent->left = min->right;
+            min->right = toDelete->right;
+        }
+        min->left = toDelete->left;
+
+        if (toDelete == root)
+        {
+            root = min;
+        }
+        else if(parent->left == toDelete)
         {
             parent->left = min;
         }
@@ -228,13 +243,6 @@ bool TurboBinarySearchTree<T>::Delete(const T& value)
         {
             parent->right = min;
         }
-
-        if(minParent != toDelete)
-        {
-            minParent->left = min->right;
-            min->right = toDelete->right;
-        }
-        min->left = toDelete->left;
     }
 
     delete toDelete;
