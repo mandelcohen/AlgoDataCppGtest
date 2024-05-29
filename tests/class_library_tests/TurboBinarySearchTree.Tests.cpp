@@ -23,8 +23,15 @@ TEST(BST, TestDeleteValueNoChild)
     tree->Insert(4); tree->Insert(2); tree->Insert(6);
     tree->Insert(1); tree->Insert(3); tree->Insert(5); tree->Insert(7);
 
+    std::cout << "The tree before deleting 7:" << std::endl;
+    tree->PrintTree();
+
     ASSERT_FALSE(tree->Delete(8));
     ASSERT_TRUE(tree->Delete(7));
+
+    std::cout << "The tree after deleting 7:" << std::endl;
+    tree->PrintTree();
+
     ASSERT_THAT(*tree, testing::ElementsAre(1, 2, 3, 4, 5, 6));
 }
 
@@ -35,7 +42,14 @@ TEST(BST, TestDeleteValueOneChild)
     tree->Insert(4); tree->Insert(2); tree->Insert(6);
     tree->Insert(3); tree->Insert(5); tree->Insert(7);
 
+    std::cout << "The tree before deleting 2:" << std::endl;
+    tree->PrintTree();
+
     ASSERT_TRUE(tree->Delete(2));
+
+    std::cout << "The tree after deleting 2:" << std::endl;
+    tree->PrintTree();
+
     ASSERT_THAT(*tree, testing::ElementsAre(3, 4, 5, 6, 7));
 }
 
@@ -46,7 +60,14 @@ TEST(BST, TestDeleteValueTwoChildren)
     tree->Insert(4); tree->Insert(2); tree->Insert(6);
     tree->Insert(1); tree->Insert(3); tree->Insert(5); tree->Insert(7);
 
+    std::cout << "The tree before deleting 2:" << std::endl;
+    tree->PrintTree();
+
     ASSERT_TRUE(tree->Delete(2));
+
+    std::cout << "The tree after deleting 2:" << std::endl;
+    tree->PrintTree();
+
     ASSERT_THAT(*tree, testing::ElementsAre(1, 3, 4, 5, 6, 7));
 }
 
@@ -57,7 +78,14 @@ TEST(BST, TestDeleteRootValue)
     tree->Insert(4); tree->Insert(2); tree->Insert(6);
     tree->Insert(1); tree->Insert(3); tree->Insert(5); tree->Insert(7);
 
+    std::cout << "The tree before deleting the root:" << std::endl;
+    tree->PrintTree();
+
     ASSERT_TRUE(tree->Delete(4));
+
+    std::cout << "The tree after deleting the root:" << std::endl;
+    tree->PrintTree();
+
     ASSERT_THAT(*tree, testing::ElementsAre(1, 2, 3, 5, 6, 7));
 }
 
