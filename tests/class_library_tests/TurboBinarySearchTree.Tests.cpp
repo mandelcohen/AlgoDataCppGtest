@@ -13,6 +13,7 @@ TEST(BST, TestInsertAndSearch)
     ASSERT_TRUE(tree->Search(7));
     ASSERT_FALSE(tree->Search(9));
     ASSERT_THAT(*tree, testing::ElementsAre(1, 2, 3, 4, 5, 6, 7));
+    tree->PrintTree();
 }
 
 TEST(BST, TestDeleteValueNoChild)
