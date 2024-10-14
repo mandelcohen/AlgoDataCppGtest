@@ -14,15 +14,24 @@ TEST(BST, TestInsert)
     tree.PrintTree();
 }
 
-TEST(BST, returnTrueIfItemWasFound)
+TEST(BST, ReturnTrueIfItemWasFound)
 {
     TurboBinarySearchTree<int> tree{};
 
     tree.Insert(4); tree.Insert(2); tree.Insert(6);
     tree.Insert(1); tree.Insert(3); tree.Insert(5); tree.Insert(7);
 
-    std::cout << "Searching for 7 in tree:" << std::endl;
     ASSERT_TRUE(tree.Search(7));
+}
+
+TEST(BST, ReturnFalseIfItemWasFound)
+{
+    TurboBinarySearchTree<int> tree{};
+
+    tree.Insert(4); tree.Insert(2); tree.Insert(6);
+    tree.Insert(1); tree.Insert(3); tree.Insert(5); tree.Insert(7);
+
+    ASSERT_FALSE(tree.Search(9));
 }
 
 TEST(BST, TestDeleteValueNoChild)
