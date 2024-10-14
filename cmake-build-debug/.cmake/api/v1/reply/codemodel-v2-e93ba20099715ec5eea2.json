@@ -227,49 +227,49 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "CLASS_LIBRARY::@390a22cf6c1c0ac5b178",
-					"jsonFile" : "target-CLASS_LIBRARY-Debug-d85aa939ddeb623f5db3.json",
+					"jsonFile" : "target-CLASS_LIBRARY-Debug-c0bf0f9467877eba5bf3.json",
 					"name" : "CLASS_LIBRARY",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 7,
 					"id" : "class_library_tests::@00a3b611e7cb6a19b81e",
-					"jsonFile" : "target-class_library_tests-Debug-f8a64c56299f059e9e31.json",
+					"jsonFile" : "target-class_library_tests-Debug-8062ad0a7a7c7cedfef5.json",
 					"name" : "class_library_tests",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "gmock::@0f7bb11d64f3678238c7",
-					"jsonFile" : "target-gmock-Debug-b20b23a689cccc15a11c.json",
+					"jsonFile" : "target-gmock-Debug-883cecce54be2b722e22.json",
 					"name" : "gmock",
 					"projectIndex" : 3
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "gmock_main::@0f7bb11d64f3678238c7",
-					"jsonFile" : "target-gmock_main-Debug-412d12767d38db477be4.json",
+					"jsonFile" : "target-gmock_main-Debug-53b97867b7530c5331a3.json",
 					"name" : "gmock_main",
 					"projectIndex" : 3
 				},
 				{
 					"directoryIndex" : 6,
 					"id" : "gtest::@1ea2dfc0605fe3ab2a3f",
-					"jsonFile" : "target-gtest-Debug-45af4e9d27795a6c3fa1.json",
+					"jsonFile" : "target-gtest-Debug-34c3e3ed04279fb48f3b.json",
 					"name" : "gtest",
 					"projectIndex" : 4
 				},
 				{
 					"directoryIndex" : 6,
 					"id" : "gtest_main::@1ea2dfc0605fe3ab2a3f",
-					"jsonFile" : "target-gtest_main-Debug-6c7de45b37821d69e295.json",
+					"jsonFile" : "target-gtest_main-Debug-a46059e5386240499cd1.json",
 					"name" : "gtest_main",
 					"projectIndex" : 4
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "main::@145eef247bfb46b6828c",
-					"jsonFile" : "target-main-Debug-6fd5a84a77fa405959e5.json",
+					"jsonFile" : "target-main-Debug-a8fab91def27c6587f30.json",
 					"name" : "main",
 					"projectIndex" : 0
 				}
@@ -285,6 +285,6 @@
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 6
+		"minor" : 7
 	}
 }

@@ -71,14 +71,6 @@ function(sleep_before_download attempt)
   execute_process(COMMAND "${CMAKE_COMMAND}" -E sleep "${sleep_seconds}")
 endfunction()
 
-if("/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/release-1.11.0.zip" STREQUAL "")
-  message(FATAL_ERROR "LOCAL can't be empty")
-endif()
-
-if("https://github.com/google/googletest/archive/refs/tags/release-1.11.0.zip" STREQUAL "")
-  message(FATAL_ERROR "REMOTE can't be empty")
-endif()
-
 if(EXISTS "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/release-1.11.0.zip")
   check_file_hash(has_hash hash_is_good)
   if(has_hash)
@@ -115,7 +107,7 @@ foreach(i RANGE ${retry_number})
   if(status_code IN_LIST download_retry_codes)
     sleep_before_download(${i})
   endif()
-  foreach(url https://github.com/google/googletest/archive/refs/tags/release-1.11.0.zip)
+  foreach(url IN ITEMS [====[https://github.com/google/googletest/archive/refs/tags/release-1.11.0.zip]====])
     if(NOT url IN_LIST skip_url_list)
       message(STATUS "Using src='${url}'")
 

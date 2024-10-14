@@ -2,42 +2,6 @@
 	"entries" : 
 	[
 		{
-			"name" : "AlgoTestsCppGtest_BINARY_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug"
-		},
-		{
-			"name" : "AlgoTestsCppGtest_IS_TOP_LEVEL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "ON"
-		},
-		{
-			"name" : "AlgoTestsCppGtest_SOURCE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "/Users/mandel/Documents/Projects/AlgoTestsCppGtest"
-		},
-		{
 			"name" : "BUILD_GMOCK",
 			"properties" : 
 			[
@@ -127,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "28"
+			"value" : "29"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -139,7 +103,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "1"
+			"value" : "6"
 		},
 		{
 			"name" : "CMAKE_COLOR_DIAGNOSTICS",
@@ -1075,7 +1039,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "13.6"
+			"value" : "13.7"
 		},
 		{
 			"name" : "CMAKE_OSX_SYSROOT",
@@ -1239,7 +1203,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/mandel/Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.28"
+			"value" : "/Users/mandel/Applications/CLion.app/Contents/bin/cmake/mac/x64/share/cmake-3.29"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",

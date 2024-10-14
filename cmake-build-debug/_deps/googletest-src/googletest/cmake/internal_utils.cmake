@@ -55,7 +55,7 @@ endmacro()
 
 # Defines the compiler/linker flags used to build Google Test and
 # Google Mock.  You can tweak these definitions to suit your need.  A
-# variable's val is empty before it's explicitly assigned to.
+# variable's value is empty before it's explicitly assigned to.
 macro(config_compiler_and_linker)
   # Note: pthreads on MinGW is not supported, even if available
   # instead, we use windows threading primitives
