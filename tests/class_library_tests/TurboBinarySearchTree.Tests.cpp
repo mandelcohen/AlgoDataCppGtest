@@ -44,6 +44,16 @@ TEST(BST, DoesDetectRootNode)
     ASSERT_TRUE(tree.Search(4));
 }
 
+TEST(BST, TestDeleteOnValueNotPresent)
+{
+    TurboBinarySearchTree<int> tree{};
+
+    tree.Insert(4); tree.Insert(2); tree.Insert(6);
+    tree.Insert(1); tree.Insert(3); tree.Insert(5); tree.Insert(7);
+
+    ASSERT_FALSE(tree.Delete(8));
+}
+
 TEST(BST, TestDeleteValueNoChild)
 {
     TurboBinarySearchTree<int> tree{};
@@ -54,7 +64,6 @@ TEST(BST, TestDeleteValueNoChild)
     std::cout << "The tree before deleting 7:" << std::endl;
     tree.PrintTree();
 
-    ASSERT_FALSE(tree.Delete(8));
     ASSERT_TRUE(tree.Delete(7));
 
     std::cout << "The tree after deleting 7:" << std::endl;
@@ -159,8 +168,8 @@ TEST(BST, TestIterationOverTree)
 
     ASSERT_THAT(tree,   testing::ElementsAre(1, 2, 3, 4, 5, 6, 7));
 
-    for (auto i = 0; i < tree.elements.size(); ++i)
+    for (int element : tree.elements)
     {
-        std::cout << tree.elements[i] << " ";
+        std::cout << element << " ";
     }
 }
