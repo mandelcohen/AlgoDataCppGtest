@@ -49,3 +49,13 @@
 1809	2354	1728894842140756743	tests/class_library_tests/class_library_tests	7caceb2a8b40d539
 1809	2354	1728894842140756743	tests/class_library_tests/class_library_tests[1]_tests.cmake	7caceb2a8b40d539
 1809	2354	1728894842140756743	/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests[1]_tests.cmake	7caceb2a8b40d539
+46	1058	1728895518337255900	src/class_library/CMakeFiles/CLASS_LIBRARY.dir/TurboBinarySearchTree.cpp.o	458a683fe24bbf0b
+1059	1133	1728895519349528994	src/class_library/libCLASS_LIBRARY.a	4e5a7b1498624f97
+48	2069	1728895518338856861	tests/class_library_tests/CMakeFiles/class_library_tests.dir/TurboBinarySearchTree.Tests.cpp.o	e2781b2ad77c72d8
+2069	2910	1728895521199506286	tests/class_library_tests/class_library_tests	7caceb2a8b40d539
+2069	2910	1728895521199506286	tests/class_library_tests/class_library_tests[1]_tests.cmake	7caceb2a8b40d539
+2069	2910	1728895521199506286	/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests[1]_tests.cmake	7caceb2a8b40d539
+26	2126	1728895625229559369	tests/class_library_tests/CMakeFiles/class_library_tests.dir/TurboBinarySearchTree.Tests.cpp.o	e2781b2ad77c72d8
+2126	2654	1728895627855831925	tests/class_library_tests/class_library_tests	7caceb2a8b40d539
+2126	2654	1728895627855831925	tests/class_library_tests/class_library_tests[1]_tests.cmake	7caceb2a8b40d539
+2126	2654	1728895627855831925	/Users/mandel/Documents/Projects/AlgoTestsCppGtest/cmake-build-debug/tests/class_library_tests/class_library_tests[1]_tests.cmake	7caceb2a8b40d539

@@ -36,7 +36,7 @@ public:
 // ----------- (Start) The "Real" Collection Code ---------------
     TurboBinarySearchTree() : root(nullptr) {}
     void Insert(const T& value);
-    bool Search(const T& value);
+    bool Search(const T& value) const;
     bool Delete(const T& value);
     void InorderTraversal(Node* node);
     void PreOrderTraversal(Node* node);
@@ -120,7 +120,7 @@ void TurboBinarySearchTree<T>::Insert(const T& value)
 }
 
 template <typename T>
-bool TurboBinarySearchTree<T>::Search(const T& value)
+bool TurboBinarySearchTree<T>::Search(const T& value) const
 {
     Node* current = root;
 
