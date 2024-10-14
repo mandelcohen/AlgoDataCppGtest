@@ -24,7 +24,7 @@ TEST(BST, ReturnTrueIfItemWasFound)
     ASSERT_TRUE(tree.Search(7));
 }
 
-TEST(BST, ReturnFalseIfItemWasFound)
+TEST(BST, ReturnFalseIfItemNotFound)
 {
     TurboBinarySearchTree<int> tree{};
 
@@ -32,6 +32,16 @@ TEST(BST, ReturnFalseIfItemWasFound)
     tree.Insert(1); tree.Insert(3); tree.Insert(5); tree.Insert(7);
 
     ASSERT_FALSE(tree.Search(9));
+}
+
+TEST(BST, DoesDetectRootNode)
+{
+    TurboBinarySearchTree<int> tree{};
+
+    tree.Insert(4); tree.Insert(2); tree.Insert(6);
+    tree.Insert(1); tree.Insert(3); tree.Insert(5); tree.Insert(7);
+
+    ASSERT_TRUE(tree.Search(4));
 }
 
 TEST(BST, TestDeleteValueNoChild)
